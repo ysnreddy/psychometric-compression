@@ -111,11 +111,6 @@ The camera-ready LOMO fits use this form and reproduce the earlier runs to withi
 
 ## Camera-ready changes
 
-- **Held-out validation now refits M3 in every rotation** (median initialization plus
-  learning-rate decay; nine of nine rotations converge), so the validated pipeline and
-  the released subset use the same response model. Headline at n=200: calibrated blend
-  1.21 pp MAE [0.8, 1.7], τ 0.89 (previously the M2-driven protocol, 1.39 pp, τ 0.61).
-  The fixed released clip list, evaluated held out, gives 1.34 pp [0.8, 2.0], τ 0.94.
 - **Quota-strength ablation** (k ∈ {0, 1, 2, 3, 5}) in sample and held out.
 - **LOMO baselines** under the same M3 rotation fits, ten seeds for stochastic selectors.
 - **Loading-structure tests**, **clip-effect NUTS check**, and **validated score ranges**.
