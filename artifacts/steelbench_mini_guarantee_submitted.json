@@ -1,0 +1,796 @@
+{
+  "artifact": "SteelBench-mini",
+  "n_clips": 200,
+  "n_items_covered": 2680,
+  "selection": "Fisher-information greedy under per-stratum floor quotas (visibility x layer x freq-band, min 3/stratum)",
+  "response_model": "m3",
+  "matrix_version": "v1",
+  "grading_map": "v1_default (sha in grading_maps/)",
+  "held_out_fidelity_EA3": {
+    "100": {
+      "mae_all": 0.023310183862073872,
+      "mae_interior": 0.022644236588666797,
+      "err_best_model": 0.03980764211825005,
+      "err_worst_model": 0.011474356519747209,
+      "kendall_tau_recon_vs_true": 0.3333333333333333,
+      "max_err": 0.03980764211825005,
+      "mae_ci95": [
+        0.0154,
+        0.0306
+      ]
+    },
+    "150": {
+      "mae_all": 0.016290674666959066,
+      "mae_interior": 0.014781280076913492,
+      "err_best_model": 0.030994712162027427,
+      "err_worst_model": 0.012152399302209738,
+      "kendall_tau_recon_vs_true": 0.3888888888888889,
+      "max_err": 0.030994712162027427,
+      "mae_ci95": [
+        0.01,
+        0.0222
+      ]
+    },
+    "200": {
+      "mae_all": 0.01390324355066923,
+      "mae_interior": 0.013414572570712444,
+      "err_best_model": 0.02131854622953111,
+      "err_worst_model": 0.009908637731504855,
+      "kendall_tau_recon_vs_true": 0.611111111111111,
+      "max_err": 0.02131854622953111,
+      "mae_ci95": [
+        0.0105,
+        0.0172
+      ]
+    }
+  },
+  "held_out_subscores_EA3b": {
+    "100": {
+      "recognition": {
+        "mae": 0.04242099841443276,
+        "mae_ci95": [
+          0.0304,
+          0.0536
+        ],
+        "tau": 0.8888888888888888
+      },
+      "perception_detail": {
+        "mae": 0.047151344308623944,
+        "mae_ci95": [
+          0.0377,
+          0.057
+        ],
+        "tau": 0.7222222222222222
+      },
+      "safety_reasoning": {
+        "mae": 0.02107730284066256,
+        "mae_ci95": [
+          0.0103,
+          0.0321
+        ],
+        "tau": 0.8333333333333334
+      }
+    },
+    "150": {
+      "recognition": {
+        "mae": 0.04672915510266471,
+        "mae_ci95": [
+          0.0377,
+          0.0548
+        ],
+        "tau": 1.0
+      },
+      "perception_detail": {
+        "mae": 0.03673157306302148,
+        "mae_ci95": [
+          0.0277,
+          0.046
+        ],
+        "tau": 0.7777777777777778
+      },
+      "safety_reasoning": {
+        "mae": 0.02143368223438869,
+        "mae_ci95": [
+          0.015,
+          0.0273
+        ],
+        "tau": 0.7777777777777778
+      }
+    },
+    "200": {
+      "recognition": {
+        "mae": 0.044265597023204026,
+        "mae_ci95": [
+          0.0377,
+          0.0502
+        ],
+        "tau": 1.0
+      },
+      "perception_detail": {
+        "mae": 0.03004997051795394,
+        "mae_ci95": [
+          0.0207,
+          0.0395
+        ],
+        "tau": 0.7777777777777778
+      },
+      "safety_reasoning": {
+        "mae": 0.0169516012828483,
+        "mae_ci95": [
+          0.0105,
+          0.0243
+        ],
+        "tau": 0.8333333333333334
+      }
+    }
+  },
+  "per_stratum_mae_bound_EA4": 0.17592592592592593,
+  "dev_subset": {
+    "n_clips": 194,
+    "disjoint_from_mini": true,
+    "sanity_dev_vs_full": {
+      "claude_opus": {
+        "full_score": 0.5043,
+        "dev_recon": 0.4882,
+        "abs_err_pp": 1.61
+      },
+      "gemini25_flash": {
+        "full_score": 0.507,
+        "dev_recon": 0.5028,
+        "abs_err_pp": 0.42
+      },
+      "gemini25_pro": {
+        "full_score": 0.4745,
+        "dev_recon": 0.4749,
+        "abs_err_pp": 0.04
+      },
+      "gemma4_31b": {
+        "full_score": 0.5223,
+        "dev_recon": 0.5411,
+        "abs_err_pp": 1.88
+      },
+      "gpt4o": {
+        "full_score": 0.5128,
+        "dev_recon": 0.4994,
+        "abs_err_pp": 1.34
+      },
+      "gpt54": {
+        "full_score": 0.5083,
+        "dev_recon": 0.5055,
+        "abs_err_pp": 0.28
+      },
+      "llama4_maverick": {
+        "full_score": 0.5742,
+        "dev_recon": 0.5723,
+        "abs_err_pp": 0.19
+      },
+      "nemotron_12b": {
+        "full_score": 0.5084,
+        "dev_recon": 0.5113,
+        "abs_err_pp": 0.29
+      },
+      "qwen35_122b": {
+        "full_score": 0.5749,
+        "dev_recon": 0.5455,
+        "abs_err_pp": 2.94
+      }
+    },
+    "sanity_mae_pp": 1.0
+  },
+  "validity_conditions": [
+    "Estimates are calibrated on a 9-model black-box respondent pool; extrapolation beyond that ability range is not guaranteed (see EA.3 best-model holdout).",
+    "Item parameters assume the v1 ordinal grading map; a stricter map (v2_strict) shifts absolute scores \u2014 re-derive the subset if the map changes.",
+    "The subset reproduces AGGREGATE and per-stratum scores; it is not a substitute for full evaluation when a new capability dimension is introduced.",
+    "Pseudo-respondents (prompt/frame perturbations) stabilise item parameters but do not add independent ability points; ranking claims rest on the 9 base models."
+  ],
+  "responsible_use": "Report subset-based scores as estimates with the EA.3 CI, not as exact full-benchmark numbers; disclose the subset size and version.",
+  "fixed_subset_evaluation": {
+    "note": "Numbers for THIS clip list. In-sample: item parameters and selection saw all nine models. Fixed-subset held-out: item parameters and the affine calibration come from the rotation that excluded the model (and its ablation runs); only the clip selection saw it.",
+    "in_sample": {
+      "aggregate": {
+        "subset_mean": {
+          "mae_pp": 2.38,
+          "tau": 0.72
+        },
+        "irt": {
+          "mae_pp": 1.14,
+          "tau": 0.78
+        },
+        "irt_cal": {
+          "mae_pp": 1.43,
+          "tau": 0.72
+        },
+        "gp_cal": {
+          "mae_pp": 1.36,
+          "tau": 0.89
+        }
+      },
+      "sub_scores": {
+        "recognition": {
+          "subset_mean": {
+            "mae_pp": 4.36,
+            "signed_bias_pp": -4.32,
+            "tau": 0.94
+          },
+          "irt": {
+            "mae_pp": 2.43,
+            "signed_bias_pp": 0.02,
+            "tau": 0.82
+          },
+          "irt_cal": {
+            "mae_pp": 2.54,
+            "signed_bias_pp": 0.1,
+            "tau": 0.61
+          },
+          "gp_cal": {
+            "mae_pp": 2.32,
+            "signed_bias_pp": -1.23,
+            "tau": 0.78
+          }
+        },
+        "perception": {
+          "subset_mean": {
+            "mae_pp": 3.36,
+            "signed_bias_pp": 3.31,
+            "tau": 0.89
+          },
+          "irt": {
+            "mae_pp": 3.92,
+            "signed_bias_pp": -0.07,
+            "tau": 0.57
+          },
+          "irt_cal": {
+            "mae_pp": 2.9,
+            "signed_bias_pp": 0.04,
+            "tau": 0.44
+          },
+          "gp_cal": {
+            "mae_pp": 2.31,
+            "signed_bias_pp": 1.02,
+            "tau": 0.67
+          }
+        },
+        "safety": {
+          "subset_mean": {
+            "mae_pp": 12.94,
+            "signed_bias_pp": -3.54,
+            "tau": 1.0
+          },
+          "irt": {
+            "mae_pp": 7.66,
+            "signed_bias_pp": -0.74,
+            "tau": 0.96
+          },
+          "irt_cal": {
+            "mae_pp": 1.74,
+            "signed_bias_pp": -0.08,
+            "tau": 0.83
+          },
+          "gp_cal": {
+            "mae_pp": 4.18,
+            "signed_bias_pp": -1.12,
+            "tau": 0.94
+          }
+        }
+      }
+    },
+    "fixed_subset_heldout": {
+      "m2": {
+        "aggregate": {
+          "subset_mean": {
+            "mae_pp": 2.38,
+            "tau": 0.72,
+            "mae_ci95_pp": [
+              1.27,
+              3.54
+            ]
+          },
+          "irt": {
+            "mae_pp": 3.25,
+            "tau": 0.06,
+            "mae_ci95_pp": [
+              NaN,
+              NaN
+            ]
+          },
+          "irt_cal": {
+            "mae_pp": 3.08,
+            "tau": -0.39,
+            "mae_ci95_pp": [
+              1.62,
+              4.67
+            ]
+          },
+          "gp_cal": {
+            "mae_pp": 1.93,
+            "tau": 0.56,
+            "mae_ci95_pp": [
+              0.94,
+              2.94
+            ]
+          }
+        },
+        "sub_scores": {
+          "recognition": {
+            "subset_mean": {
+              "mae_pp": 4.36,
+              "tau": 0.94
+            },
+            "irt": {
+              "mae_pp": 6.37,
+              "tau": -0.28
+            },
+            "irt_cal": {
+              "mae_pp": 7.32,
+              "tau": -0.44
+            }
+          },
+          "perception": {
+            "subset_mean": {
+              "mae_pp": 3.36,
+              "tau": 0.89
+            },
+            "irt": {
+              "mae_pp": 4.01,
+              "tau": 0.33
+            },
+            "irt_cal": {
+              "mae_pp": 3.77,
+              "tau": 0.17
+            }
+          },
+          "safety": {
+            "subset_mean": {
+              "mae_pp": 12.94,
+              "tau": 1.0
+            },
+            "irt": {
+              "mae_pp": 6.42,
+              "tau": -0.89
+            },
+            "irt_cal": {
+              "mae_pp": 5.67,
+              "tau": 0.17
+            }
+          }
+        }
+      },
+      "m3": {
+        "aggregate": {
+          "subset_mean": {
+            "mae_pp": 2.38,
+            "tau": 0.72,
+            "mae_ci95_pp": [
+              1.27,
+              3.54
+            ]
+          },
+          "irt": {
+            "mae_pp": 1.46,
+            "tau": 0.83,
+            "mae_ci95_pp": [
+              NaN,
+              NaN
+            ]
+          },
+          "irt_cal": {
+            "mae_pp": 1.31,
+            "tau": 0.78,
+            "mae_ci95_pp": [
+              0.62,
+              2.1
+            ]
+          },
+          "gp_cal": {
+            "mae_pp": 1.27,
+            "tau": 0.83,
+            "mae_ci95_pp": [
+              0.67,
+              1.92
+            ]
+          }
+        },
+        "sub_scores": {
+          "recognition": {
+            "subset_mean": {
+              "mae_pp": 4.36,
+              "tau": 0.94
+            },
+            "irt": {
+              "mae_pp": 2.62,
+              "tau": 0.67
+            },
+            "irt_cal": {
+              "mae_pp": 3.35,
+              "tau": 0.56
+            }
+          },
+          "perception": {
+            "subset_mean": {
+              "mae_pp": 3.36,
+              "tau": 0.89
+            },
+            "irt": {
+              "mae_pp": 3.36,
+              "tau": 0.5
+            },
+            "irt_cal": {
+              "mae_pp": 2.54,
+              "tau": 0.39
+            }
+          },
+          "safety": {
+            "subset_mean": {
+              "mae_pp": 12.94,
+              "tau": 1.0
+            },
+            "irt": {
+              "mae_pp": 7.07,
+              "tau": 0.78
+            },
+            "irt_cal": {
+              "mae_pp": 2.06,
+              "tau": 0.78
+            }
+          }
+        }
+      }
+    },
+    "recommended_use": "Report aggregate levels with the calibrated estimator (gp_cal / irt_cal). Report capability sub-score RANKINGS from the naive per-dimension subset mean (highest tau) and capability sub-score LEVELS from the calibrated per-dimension estimator: the naive safety level on this subset is biased (see signed_bias_pp)."
+  },
+  "held_out_baselines_LOMO_n200": {
+    "m2": {
+      "fisher_stratified": {
+        "subset_mean": {
+          "mae_pp": 1.39,
+          "mae_ci95_pp": [
+            1.04,
+            1.74
+          ],
+          "tau": 0.61
+        },
+        "irt_cal": {
+          "mae_pp": 2.86,
+          "mae_ci95_pp": [
+            1.39,
+            4.49
+          ],
+          "tau": -0.56
+        },
+        "gp_cal": {
+          "mae_pp": 1.77,
+          "mae_ci95_pp": [
+            0.77,
+            2.9
+          ],
+          "tau": 0.5
+        }
+      },
+      "fisher_unconstrained": {
+        "subset_mean": {
+          "mae_pp": 1.37,
+          "mae_ci95_pp": [
+            0.96,
+            1.74
+          ],
+          "tau": 0.56
+        },
+        "irt_cal": {
+          "mae_pp": 2.94,
+          "mae_ci95_pp": [
+            1.49,
+            4.52
+          ],
+          "tau": -0.56
+        },
+        "gp_cal": {
+          "mae_pp": 2.05,
+          "mae_ci95_pp": [
+            1.04,
+            3.16
+          ],
+          "tau": 0.5
+        }
+      },
+      "stratified_random": {
+        "subset_mean": {
+          "mae_pp": 1.14,
+          "mae_ci95_pp": [
+            1.02,
+            1.26
+          ],
+          "tau": 0.73
+        },
+        "irt_cal": {
+          "mae_pp": 3.03,
+          "mae_ci95_pp": [
+            1.58,
+            4.62
+          ],
+          "tau": -0.5
+        },
+        "gp_cal": {
+          "mae_pp": 2.16,
+          "mae_ci95_pp": [
+            1.08,
+            3.34
+          ],
+          "tau": 0.52
+        }
+      },
+      "random": {
+        "subset_mean": {
+          "mae_pp": 0.99,
+          "mae_ci95_pp": [
+            0.82,
+            1.19
+          ],
+          "tau": 0.68
+        },
+        "irt_cal": {
+          "mae_pp": 2.98,
+          "mae_ci95_pp": [
+            1.55,
+            4.56
+          ],
+          "tau": -0.44
+        },
+        "gp_cal": {
+          "mae_pp": 2.08,
+          "mae_ci95_pp": [
+            1.09,
+            3.2
+          ],
+          "tau": 0.59
+        }
+      },
+      "kmedoids": {
+        "subset_mean": {
+          "mae_pp": 0.91,
+          "mae_ci95_pp": [
+            0.57,
+            1.25
+          ],
+          "tau": 0.67
+        },
+        "irt_cal": {
+          "mae_pp": 2.94,
+          "mae_ci95_pp": [
+            1.53,
+            4.54
+          ],
+          "tau": -0.44
+        },
+        "gp_cal": {
+          "mae_pp": 2.0,
+          "mae_ci95_pp": [
+            1.0,
+            3.08
+          ],
+          "tau": 0.69
+        }
+      },
+      "disagree_stratified": {
+        "subset_mean": {
+          "mae_pp": 1.19,
+          "mae_ci95_pp": [
+            0.77,
+            1.59
+          ],
+          "tau": 0.67
+        },
+        "irt_cal": {
+          "mae_pp": 3.04,
+          "mae_ci95_pp": [
+            1.55,
+            4.69
+          ],
+          "tau": -0.44
+        },
+        "gp_cal": {
+          "mae_pp": 2.35,
+          "mae_ci95_pp": [
+            1.37,
+            3.36
+          ],
+          "tau": 0.5
+        }
+      }
+    },
+    "m3_stab": {
+      "fisher_stratified": {
+        "subset_mean": {
+          "mae_pp": 2.2,
+          "mae_ci95_pp": [
+            1.06,
+            3.48
+          ],
+          "tau": 0.67
+        },
+        "irt_cal": {
+          "mae_pp": 1.41,
+          "mae_ci95_pp": [
+            0.68,
+            2.22
+          ],
+          "tau": 0.78
+        },
+        "gp_cal": {
+          "mae_pp": 1.2,
+          "mae_ci95_pp": [
+            0.77,
+            1.71
+          ],
+          "tau": 0.89
+        }
+      },
+      "fisher_unconstrained": {
+        "subset_mean": {
+          "mae_pp": 1.43,
+          "mae_ci95_pp": [
+            0.85,
+            2.09
+          ],
+          "tau": 0.56
+        },
+        "irt_cal": {
+          "mae_pp": 1.51,
+          "mae_ci95_pp": [
+            0.88,
+            2.27
+          ],
+          "tau": 0.83
+        },
+        "gp_cal": {
+          "mae_pp": 1.04,
+          "mae_ci95_pp": [
+            0.55,
+            1.54
+          ],
+          "tau": 0.89
+        }
+      },
+      "stratified_random": {
+        "subset_mean": {
+          "mae_pp": 1.14,
+          "mae_ci95_pp": [
+            1.02,
+            1.26
+          ],
+          "tau": 0.73
+        },
+        "irt_cal": {
+          "mae_pp": 1.56,
+          "mae_ci95_pp": [
+            0.95,
+            2.19
+          ],
+          "tau": 0.72
+        },
+        "gp_cal": {
+          "mae_pp": 1.3,
+          "mae_ci95_pp": [
+            0.94,
+            1.66
+          ],
+          "tau": 0.79
+        }
+      },
+      "random": {
+        "subset_mean": {
+          "mae_pp": 0.99,
+          "mae_ci95_pp": [
+            0.82,
+            1.19
+          ],
+          "tau": 0.68
+        },
+        "irt_cal": {
+          "mae_pp": 1.47,
+          "mae_ci95_pp": [
+            0.82,
+            2.23
+          ],
+          "tau": 0.7
+        },
+        "gp_cal": {
+          "mae_pp": 1.09,
+          "mae_ci95_pp": [
+            0.65,
+            1.64
+          ],
+          "tau": 0.73
+        }
+      },
+      "kmedoids": {
+        "subset_mean": {
+          "mae_pp": 0.76,
+          "mae_ci95_pp": [
+            0.46,
+            1.18
+          ],
+          "tau": 0.67
+        },
+        "irt_cal": {
+          "mae_pp": 1.83,
+          "mae_ci95_pp": [
+            1.18,
+            2.63
+          ],
+          "tau": 0.72
+        },
+        "gp_cal": {
+          "mae_pp": 1.26,
+          "mae_ci95_pp": [
+            0.77,
+            1.85
+          ],
+          "tau": 0.86
+        }
+      },
+      "disagree_stratified": {
+        "subset_mean": {
+          "mae_pp": 1.19,
+          "mae_ci95_pp": [
+            0.77,
+            1.59
+          ],
+          "tau": 0.67
+        },
+        "irt_cal": {
+          "mae_pp": 1.7,
+          "mae_ci95_pp": [
+            0.73,
+            2.79
+          ],
+          "tau": 0.72
+        },
+        "gp_cal": {
+          "mae_pp": 1.37,
+          "mae_ci95_pp": [
+            0.73,
+            2.15
+          ],
+          "tau": 0.78
+        }
+      }
+    }
+  },
+  "held_out_LOMO_M3_stabilised_n200": {
+    "subset_mean": {
+      "mae_pp": 2.2,
+      "tau": 0.67
+    },
+    "irt_cal": {
+      "mae_pp": 1.41,
+      "tau": 0.78
+    },
+    "gp_cal": {
+      "mae_pp": 1.2,
+      "tau": 0.89
+    },
+    "rotations_using_m3": 9
+  },
+  "subscore_ranking_reliability_full_benchmark": {
+    "recognition": {
+      "tau_boot_vs_full": 0.98,
+      "split_half_tau": 0.96,
+      "stable_pairs_95_of_36": 33
+    },
+    "perception_detail": {
+      "tau_boot_vs_full": 0.93,
+      "split_half_tau": 0.87,
+      "stable_pairs_95_of_36": 32
+    },
+    "safety_reasoning": {
+      "tau_boot_vs_full": 0.91,
+      "split_half_tau": 0.81,
+      "stable_pairs_95_of_36": 32
+    },
+    "aggregate": {
+      "tau_boot_vs_full": 0.81,
+      "split_half_tau": 0.63,
+      "stable_pairs_95_of_36": 24
+    }
+  }
+}

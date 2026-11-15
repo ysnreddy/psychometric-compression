@@ -1,0 +1,223 @@
+{
+  "matrix": "data/response_matrix_v1.parquet",
+  "fit": "results/fits/m3.npz",
+  "n": 200,
+  "min_k": 2,
+  "n_strata": 31,
+  "methods": {
+    "fisher_unconstrained": {
+      "aggregate_mae": 0.015587130651745293,
+      "aggregate_tau": 0.611111111111111,
+      "n_items": 3624,
+      "strata_dropped_below_k": 19,
+      "strata_zero_coverage": 17,
+      "zero_cov_strata": [
+        "clear|1|head",
+        "clear|1|mid",
+        "clear|1|tail",
+        "dust|1|head",
+        "dust|1|mid",
+        "dust|1|tail",
+        "glare|1|head",
+        "glare|1|mid",
+        "glare|1|tail",
+        "low_light|1|head",
+        "low_light|1|mid",
+        "low_light|2|tail",
+        "smoke|1|head",
+        "smoke|2|head",
+        "smoke|2|mid",
+        "steam|1|head",
+        "steam|2|tail"
+      ],
+      "per_stratum_mae_mean": 0.08725806136688134,
+      "per_stratum_mae_max": 0.21826491818213672,
+      "worst_strata": [
+        [
+          "dust|1|tail",
+          0.21826491818213672
+        ],
+        [
+          "smoke|1|head",
+          0.21766924208977192
+        ],
+        [
+          "steam|2|tail",
+          0.21429666421388274
+        ],
+        [
+          "glare|1|tail",
+          0.19693555310277164
+        ],
+        [
+          "low_light|1|mid",
+          0.1543567574196713
+        ]
+      ],
+      "per_stratum_mae": {
+        "clear|1|head": 0.0417,
+        "clear|1|mid": 0.1181,
+        "clear|1|tail": 0.1418,
+        "clear|2|head": 0.0601,
+        "clear|2|mid": 0.0238,
+        "clear|2|tail": 0.019,
+        "dust|1|head": 0.0548,
+        "dust|1|mid": 0.0948,
+        "dust|1|tail": 0.2183,
+        "dust|2|head": 0.0524,
+        "dust|2|mid": 0.0239,
+        "dust|2|tail": 0.0463,
+        "glare|1|head": 0.0422,
+        "glare|1|mid": 0.109,
+        "glare|1|tail": 0.1969,
+        "glare|2|head": 0.0575,
+        "glare|2|mid": 0.0222,
+        "glare|2|tail": 0.0648,
+        "low_light|1|head": 0.0604,
+        "low_light|1|mid": 0.1544,
+        "low_light|2|head": 0.132,
+        "low_light|2|mid": 0.0219,
+        "low_light|2|tail": 0.084,
+        "smoke|1|head": 0.2177,
+        "smoke|2|head": 0.144,
+        "smoke|2|mid": 0.0577,
+        "smoke|2|tail": 0.0,
+        "steam|1|head": 0.0858,
+        "steam|2|head": 0.0704,
+        "steam|2|mid": 0.0746,
+        "steam|2|tail": 0.2143
+      },
+      "coverage": {
+        "clear|1|head": 0,
+        "clear|1|mid": 0,
+        "clear|1|tail": 0,
+        "clear|2|head": 22,
+        "clear|2|mid": 56,
+        "clear|2|tail": 14,
+        "dust|1|head": 0,
+        "dust|1|mid": 0,
+        "dust|1|tail": 0,
+        "dust|2|head": 9,
+        "dust|2|mid": 46,
+        "dust|2|tail": 12,
+        "glare|1|head": 0,
+        "glare|1|mid": 0,
+        "glare|1|tail": 0,
+        "glare|2|head": 6,
+        "glare|2|mid": 19,
+        "glare|2|tail": 2,
+        "low_light|1|head": 0,
+        "low_light|1|mid": 0,
+        "low_light|2|head": 1,
+        "low_light|2|mid": 8,
+        "low_light|2|tail": 0,
+        "smoke|1|head": 0,
+        "smoke|2|head": 0,
+        "smoke|2|mid": 0,
+        "smoke|2|tail": 2,
+        "steam|1|head": 0,
+        "steam|2|head": 1,
+        "steam|2|mid": 2,
+        "steam|2|tail": 0
+      }
+    },
+    "fisher_stratified": {
+      "aggregate_mae": 0.024708900947160335,
+      "aggregate_tau": 0.7222222222222222,
+      "n_items": 2682,
+      "strata_dropped_below_k": 14,
+      "strata_zero_coverage": 0,
+      "zero_cov_strata": [],
+      "per_stratum_mae_mean": 0.07349160724189163,
+      "per_stratum_mae_max": 0.21759259259259262,
+      "worst_strata": [
+        [
+          "clear|1|tail",
+          0.21759259259259262
+        ],
+        [
+          "low_light|2|head",
+          0.13204998311381289
+        ],
+        [
+          "glare|1|mid",
+          0.1297514619883041
+        ],
+        [
+          "glare|2|tail",
+          0.12220418470418472
+        ],
+        [
+          "glare|1|tail",
+          0.11458333333333333
+        ]
+      ],
+      "per_stratum_mae": {
+        "clear|1|head": 0.0912,
+        "clear|1|mid": 0.0933,
+        "clear|1|tail": 0.2176,
+        "clear|2|head": 0.0707,
+        "clear|2|mid": 0.0478,
+        "clear|2|tail": 0.043,
+        "dust|1|head": 0.0963,
+        "dust|1|mid": 0.0501,
+        "dust|1|tail": 0.1131,
+        "dust|2|head": 0.0349,
+        "dust|2|mid": 0.0345,
+        "dust|2|tail": 0.0454,
+        "glare|1|head": 0.0865,
+        "glare|1|mid": 0.1298,
+        "glare|1|tail": 0.1146,
+        "glare|2|head": 0.0821,
+        "glare|2|mid": 0.0366,
+        "glare|2|tail": 0.1222,
+        "low_light|1|head": 0.0768,
+        "low_light|1|mid": 0.0,
+        "low_light|2|head": 0.132,
+        "low_light|2|mid": 0.0306,
+        "low_light|2|tail": 0.1053,
+        "smoke|1|head": 0.0,
+        "smoke|2|head": 0.0,
+        "smoke|2|mid": 0.0914,
+        "smoke|2|tail": 0.0903,
+        "steam|1|head": 0.0972,
+        "steam|2|head": 0.0704,
+        "steam|2|mid": 0.0746,
+        "steam|2|tail": 0.0
+      },
+      "coverage": {
+        "clear|1|head": 28,
+        "clear|1|mid": 5,
+        "clear|1|tail": 1,
+        "clear|2|head": 14,
+        "clear|2|mid": 31,
+        "clear|2|tail": 5,
+        "dust|1|head": 14,
+        "dust|1|mid": 3,
+        "dust|1|tail": 1,
+        "dust|2|head": 12,
+        "dust|2|mid": 28,
+        "dust|2|tail": 7,
+        "glare|1|head": 13,
+        "glare|1|mid": 2,
+        "glare|1|tail": 1,
+        "glare|2|head": 3,
+        "glare|2|mid": 10,
+        "glare|2|tail": 1,
+        "low_light|1|head": 2,
+        "low_light|1|mid": 1,
+        "low_light|2|head": 1,
+        "low_light|2|mid": 7,
+        "low_light|2|tail": 1,
+        "smoke|1|head": 1,
+        "smoke|2|head": 1,
+        "smoke|2|mid": 1,
+        "smoke|2|tail": 1,
+        "steam|1|head": 1,
+        "steam|2|head": 1,
+        "steam|2|mid": 2,
+        "steam|2|tail": 1
+      }
+    }
+  }
+}

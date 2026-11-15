@@ -1,0 +1,22 @@
+{
+  "steps": 4000,
+  "seeds": 3,
+  "n_obs": 170162,
+  "elpd_diff_M3_minus_M2": 4047.8,
+  "dse": {
+    "naive": 87.5,
+    "resp_clip_cell": {
+      "se": 93.9,
+      "n_clusters": 17046
+    },
+    "clip": {
+      "se": 149.8,
+      "n_clusters": 1345
+    }
+  },
+  "z": {
+    "naive": 46.3,
+    "resp_clip_cell": 43.1,
+    "clip": 27.0
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "matrix": "data/response_matrix_v1.parquet",
+  "n_dim": 3,
+  "dim_names": [
+    "recognition",
+    "perception_detail",
+    "safety_reasoning"
+  ],
+  "dimension_correlation": [
+    [
+      1.0,
+      -0.4690000116825104,
+      -0.7929999828338623
+    ],
+    [
+      -0.4690000116825104,
+      1.0,
+      0.012000000104308128
+    ],
+    [
+      -0.7929999828338623,
+      0.012000000104308128,
+      1.0
+    ]
+  ],
+  "per_dim": {
+    "recognition": {
+      "theta_vs_subscore_tau": 0.816982446237566,
+      "ability_ranking": [
+        "qwen35_122b",
+        "gpt4o",
+        "nemotron_12b",
+        "gemma4_31b",
+        "llama4_maverick",
+        "claude_opus",
+        "gemini25_flash",
+        "gemini25_pro",
+        "gpt54"
+      ],
+      "true_subscore_ranking": [
+        "qwen35_122b",
+        "gpt4o",
+        "gemma4_31b",
+        "llama4_maverick",
+        "claude_opus",
+        "nemotron_12b",
+        "gemini25_flash",
+        "gpt54",
+        "gemini25_pro"
+      ]
+    },
+    "perception_detail": {
+      "theta_vs_subscore_tau": 0.5512459105263765,
+      "ability_ranking": [
+        "qwen35_122b",
+        "gpt54",
+        "gemma4_31b",
+        "gemini25_flash",
+        "gemini25_pro",
+        "claude_opus",
+        "nemotron_12b",
+        "llama4_maverick",
+        "gpt4o"
+      ],
+      "true_subscore_ranking": [
+        "qwen35_122b",
+        "llama4_maverick",
+        "gpt54",
+        "gemini25_flash",
+        "gemini25_pro",
+        "gemma4_31b",
+        "nemotron_12b",
+        "claude_opus",
+        "gpt4o"
+      ]
+    },
+    "safety_reasoning": {
+      "theta_vs_subscore_tau": 0.9718253158075499,
+      "ability_ranking": [
+        "llama4_maverick",
+        "gpt4o",
+        "gpt54",
+        "gemini25_flash",
+        "nemotron_12b",
+        "gemini25_pro",
+        "gemma4_31b",
+        "claude_opus",
+        "qwen35_122b"
+      ],
+      "true_subscore_ranking": [
+        "llama4_maverick",
+        "gpt4o",
+        "gpt54",
+        "nemotron_12b",
+        "gemini25_flash",
+        "gemini25_pro",
+        "gemma4_31b",
+        "claude_opus",
+        "qwen35_122b"
+      ]
+    }
+  },
+  "unidim_mis_ranking": {
+    "recognition": {
+      "m2_unidim_vs_this_subscore_tau": -0.14085904245475275
+    },
+    "perception_detail": {
+      "m2_unidim_vs_this_subscore_tau": 0.4789207443461594
+    },
+    "safety_reasoning": {
+      "m2_unidim_vs_this_subscore_tau": -0.4789207443461594
+    }
+  },
+  "fragmentation": {
+    "n_swapping_pairs": 63,
+    "examples": [
+      {
+        "model_a": "claude_opus",
+        "model_b": "gemini25_flash",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "claude_opus>gemini25_flash",
+        "order_dim_b": "claude_opus<gemini25_flash"
+      },
+      {
+        "model_a": "claude_opus",
+        "model_b": "gemini25_pro",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "claude_opus>gemini25_pro",
+        "order_dim_b": "claude_opus<gemini25_pro"
+      },
+      {
+        "model_a": "claude_opus",
+        "model_b": "gpt4o",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "claude_opus<gpt4o",
+        "order_dim_b": "claude_opus>gpt4o"
+      },
+      {
+        "model_a": "claude_opus",
+        "model_b": "gpt54",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "claude_opus>gpt54",
+        "order_dim_b": "claude_opus<gpt54"
+      },
+      {
+        "model_a": "claude_opus",
+        "model_b": "llama4_maverick",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "claude_opus<llama4_maverick",
+        "order_dim_b": "claude_opus>llama4_maverick"
+      },
+      {
+        "model_a": "claude_opus",
+        "model_b": "nemotron_12b",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "claude_opus<nemotron_12b",
+        "order_dim_b": "claude_opus>nemotron_12b"
+      },
+      {
+        "model_a": "gemini25_flash",
+        "model_b": "gpt4o",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "gemini25_flash<gpt4o",
+        "order_dim_b": "gemini25_flash>gpt4o"
+      },
+      {
+        "model_a": "gemini25_flash",
+        "model_b": "gpt54",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "gemini25_flash>gpt54",
+        "order_dim_b": "gemini25_flash<gpt54"
+      },
+      {
+        "model_a": "gemini25_flash",
+        "model_b": "llama4_maverick",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "gemini25_flash<llama4_maverick",
+        "order_dim_b": "gemini25_flash>llama4_maverick"
+      },
+      {
+        "model_a": "gemini25_flash",
+        "model_b": "nemotron_12b",
+        "dim_a": "recognition",
+        "dim_b": "perception_detail",
+        "order_dim_a": "gemini25_flash<nemotron_12b",
+        "order_dim_b": "gemini25_flash>nemotron_12b"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2355 @@
+{
+  "lomo": "results/camera_ready/lomo_m3_k3_raw.json",
+  "selector": "fisher_stratified",
+  "calibration_range_9_models": {
+    "aggregate": [
+      0.47452110146662674,
+      0.5749027237354085
+    ],
+    "recognition": [
+      0.35517241379310344,
+      0.5695812807881774
+    ],
+    "perception_detail": [
+      0.4759337989675068,
+      0.6611752201639842
+    ],
+    "safety_reasoning": [
+      0.37380426784400295,
+      0.5754231052244297
+    ]
+  },
+  "by_n": {
+    "150": {
+      "aggregate": {
+        "subset_mean": {
+          "summary": {
+            "n_inside": 7,
+            "n_outside": 2,
+            "mae_inside_pp": 3.11696127604031,
+            "max_inside_pp": 8.530380125710868,
+            "mae_outside_pp": 1.6839104405147824,
+            "max_outside_pp": 3.3079660025185307,
+            "spearman_err_vs_distance": -0.25103950552320115
+          },
+          "rows": [
+            {
+              "model": "claude_opus",
+              "true": 0.5042651900628554,
+              "pred": 0.466,
+              "err_pp": 3.8265190062855394,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_flash",
+              "true": 0.5070338222089195,
+              "pred": 0.5164506480558325,
+              "err_pp": 0.9416825846913057,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_pro",
+              "true": 0.47452110146662674,
+              "pred": 0.44144144144144143,
+              "err_pp": 3.3079660025185307,
+              "position": "below",
+              "dist_pp": 2.974408859622868
+            },
+            {
+              "model": "gemma4_31b",
+              "true": 0.5222987129601916,
+              "pred": 0.5152784622966978,
+              "err_pp": 0.7020250663493766,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt4o",
+              "true": 0.512832984136486,
+              "pred": 0.5675675675675675,
+              "err_pp": 5.473458343108151,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt54",
+              "true": 0.5083433103861119,
+              "pred": 0.5271629778672032,
+              "err_pp": 1.8819667481091318,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "llama4_maverick",
+              "true": 0.5742292726728524,
+              "pred": 0.6595330739299611,
+              "err_pp": 8.530380125710868,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "nemotron_12b",
+              "true": 0.5083807243340317,
+              "pred": 0.5037537537537538,
+              "err_pp": 0.4626970580277945,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "qwen35_122b",
+              "true": 0.5749027237354085,
+              "pred": 0.5743041749502982,
+              "err_pp": 0.059854878511034215,
+              "position": "above",
+              "dist_pp": 0.06734510625561185
+            }
+          ]
+        },
+        "irt_cal": {
+          "summary": {
+            "n_inside": 7,
+            "n_outside": 2,
+            "mae_inside_pp": 0.9687425369664747,
+            "max_inside_pp": 2.2817914729752142,
+            "mae_outside_pp": 2.1542912729262786,
+            "max_outside_pp": 3.921217735878102,
+            "spearman_err_vs_distance": 0.13693063937629152
+          },
+          "rows": [
+            {
+              "model": "claude_opus",
+              "true": 0.5042651900628554,
+              "pred": 0.5017484012630474,
+              "err_pp": 0.25167887998079896,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_flash",
+              "true": 0.5070338222089195,
+              "pred": 0.5057336809880099,
+              "err_pp": 0.13001412209096008,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_pro",
+              "true": 0.47452110146662674,
+              "pred": 0.4783947495663713,
+              "err_pp": 0.3873648099744553,
+              "position": "below",
+              "dist_pp": 2.974408859622868
+            },
+            {
+              "model": "gemma4_31b",
+              "true": 0.5222987129601916,
+              "pred": 0.5380207409693434,
+              "err_pp": 1.572202800915179,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt4o",
+              "true": 0.512832984136486,
+              "pred": 0.5223472779502278,
+              "err_pp": 0.9514293813741803,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt54",
+              "true": 0.5083433103861119,
+              "pred": 0.516210879790627,
+              "err_pp": 0.7867569404515051,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "llama4_maverick",
+              "true": 0.5742292726728524,
+              "pred": 0.5661560310630775,
+              "err_pp": 0.807324160977485,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "nemotron_12b",
+              "true": 0.5083807243340317,
+              "pred": 0.5311986390637838,
+              "err_pp": 2.2817914729752142,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "qwen35_122b",
+              "true": 0.5749027237354085,
+              "pred": 0.5356905463766275,
+              "err_pp": 3.921217735878102,
+              "position": "above",
+              "dist_pp": 0.06734510625561185
+            }
+          ]
+        },
+        "gp_cal": {
+          "summary": {
+            "n_inside": 7,
+            "n_outside": 2,
+            "mae_inside_pp": 1.3259071771283197,
+            "max_inside_pp": 2.308038069894369,
+            "mae_outside_pp": 1.7420216562207103,
+            "max_outside_pp": 2.762808878667977,
+            "spearman_err_vs_distance": 0.02282177322938192
+          },
+          "rows": [
+            {
+              "model": "claude_opus",
+              "true": 0.5042651900628554,
+              "pred": 0.49102388088413323,
+              "err_pp": 1.3241309178722183,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_flash",
+              "true": 0.5070338222089195,
+              "pred": 0.5089487711083567,
+              "err_pp": 0.19149488994372188,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_pro",
+              "true": 0.47452110146662674,
+              "pred": 0.4673087571288923,
+              "err_pp": 0.7212344337734433,
+              "position": "below",
+              "dist_pp": 2.974408859622868
+            },
+            {
+              "model": "gemma4_31b",
+              "true": 0.5222987129601916,
+              "pred": 0.5311980573675497,
+              "err_pp": 0.8899344407358067,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt4o",
+              "true": 0.512832984136486,
+              "pred": 0.5359133648354297,
+              "err_pp": 2.308038069894369,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt54",
+              "true": 0.5083433103861119,
+              "pred": 0.5194965092135998,
+              "err_pp": 1.1153198827487887,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "llama4_maverick",
+              "true": 0.5742292726728524,
+              "pred": 0.5941691439231427,
+              "err_pp": 1.9939871250290286,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "nemotron_12b",
+              "true": 0.5083807243340317,
+              "pred": 0.5229651734707748,
+              "err_pp": 1.458444913674306,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "qwen35_122b",
+              "true": 0.5749027237354085,
+              "pred": 0.5472746349487287,
+              "err_pp": 2.762808878667977,
+              "position": "above",
+              "dist_pp": 0.06734510625561185
+            }
+          ]
+        }
+      },
+      "sub_scores": {
+        "recognition": {
+          "subset_mean": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 3.8339066220572837,
+              "max_inside_pp": 7.388677881861522,
+              "mae_outside_pp": 4.5030930631174275,
+              "max_outside_pp": 8.601020345442251,
+              "spearman_err_vs_distance": 0.18257418583505536
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.5185960591133005,
+                "pred": 0.46441281138790036,
+                "err_pp": 5.418324772540018,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4392857142857143,
+                "pred": 0.3770053475935829,
+                "err_pp": 6.228036669213139,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.35517241379310344,
+                "pred": 0.26916221033868093,
+                "err_pp": 8.601020345442251,
+                "position": "below",
+                "dist_pp": 3.1773399014778327
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5380541871921182,
+                "pred": 0.5370370370370371,
+                "err_pp": 0.10171501550810813,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5480295566502463,
+                "pred": 0.5422661870503597,
+                "err_pp": 0.5763369599886659,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.38694581280788176,
+                "pred": 0.31305903398926654,
+                "err_pp": 7.388677881861522,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.526847290640394,
+                "pred": 0.4956293706293706,
+                "err_pp": 3.1217920011023415,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.47216748768472905,
+                "pred": 0.43214285714285716,
+                "err_pp": 4.002463054187189,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.5695812807881774,
+                "pred": 0.5655296229802513,
+                "err_pp": 0.40516578079260457,
+                "position": "above",
+                "dist_pp": 2.155172413793105
+              }
+            ]
+          },
+          "irt_cal": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 2.2704776886750806,
+              "max_inside_pp": 6.474006547466537,
+              "mae_outside_pp": 5.164137432842066,
+              "max_outside_pp": 6.127373521604812,
+              "spearman_err_vs_distance": 0.5249007842757842
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.5185960591133005,
+                "pred": 0.4879690040659178,
+                "err_pp": 3.0627055047382723,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4392857142857143,
+                "pred": 0.4331299042038297,
+                "err_pp": 0.6155810081884594,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.35517241379310344,
+                "pred": 0.41644614900915156,
+                "err_pp": 6.127373521604812,
+                "position": "below",
+                "dist_pp": 3.1773399014778327
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5380541871921182,
+                "pred": 0.5364095956324035,
+                "err_pp": 0.16445915597146366,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5480295566502463,
+                "pred": 0.5281889429030323,
+                "err_pp": 1.984061374721402,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.38694581280788176,
+                "pred": 0.39842140506268214,
+                "err_pp": 1.1475592254800382,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.526847290640394,
+                "pred": 0.5023975805988001,
+                "err_pp": 2.444971004159391,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.47216748768472905,
+                "pred": 0.5369075531593944,
+                "err_pp": 6.474006547466537,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.5695812807881774,
+                "pred": 0.5275722673473842,
+                "err_pp": 4.2009013440793215,
+                "position": "above",
+                "dist_pp": 2.155172413793105
+              }
+            ]
+          }
+        },
+        "perception_detail": {
+          "subset_mean": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 4.543515058328313,
+              "max_inside_pp": 10.562309595827024,
+              "mae_outside_pp": 4.828346390390734,
+              "max_outside_pp": 6.449271876731344,
+              "spearman_err_vs_distance": 0.06846531968814576
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.540616459155785,
+                "pred": 0.5584795321637427,
+                "err_pp": 1.7863073007957642,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.5799423018524142,
+                "pred": 0.6426499032882012,
+                "err_pp": 6.270760143578691,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.5665806255693896,
+                "pred": 0.5896686159844055,
+                "err_pp": 2.3087990415015858,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5626328575766778,
+                "pred": 0.6038277511961723,
+                "err_pp": 4.119489361949446,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.4759337989675068,
+                "pred": 0.508008008008008,
+                "err_pp": 3.2074209040501236,
+                "position": "below",
+                "dist_pp": 6.468266018827823
+              },
+              {
+                "model": "gpt54",
+                "true": 0.5943668387488612,
+                "pred": 0.6607843137254902,
+                "err_pp": 6.641747497662898,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.602945642271485,
+                "pred": 0.7085687382297552,
+                "err_pp": 10.562309595827024,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.5619495900394776,
+                "pred": 0.5607976653696498,
+                "err_pp": 0.11519246698278307,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.6611752201639842,
+                "pred": 0.7256679389312977,
+                "err_pp": 6.449271876731344,
+                "position": "above",
+                "dist_pp": 5.822957789249927
+              }
+            ]
+          },
+          "irt_cal": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 1.7866405566139782,
+              "max_inside_pp": 4.064713148558196,
+              "mae_outside_pp": 7.266561066939611,
+              "max_outside_pp": 7.770935161233583,
+              "spearman_err_vs_distance": 0.7074749701108396
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.540616459155785,
+                "pred": 0.581263590641367,
+                "err_pp": 4.064713148558196,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.5799423018524142,
+                "pred": 0.5843030950352037,
+                "err_pp": 0.43607931827894797,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.5665806255693896,
+                "pred": 0.5862294472987482,
+                "err_pp": 1.9648821729358557,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5626328575766778,
+                "pred": 0.5855748799633346,
+                "err_pp": 2.294202238665677,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.4759337989675068,
+                "pred": 0.5435556686939632,
+                "err_pp": 6.762186972645639,
+                "position": "below",
+                "dist_pp": 6.468266018827823
+              },
+              {
+                "model": "gpt54",
+                "true": 0.5943668387488612,
+                "pred": 0.5989049344976094,
+                "err_pp": 0.45380957487481943,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.602945642271485,
+                "pred": 0.5790456749424588,
+                "err_pp": 2.3899967329026106,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.5619495900394776,
+                "pred": 0.5529215829386602,
+                "err_pp": 0.9028007100817415,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.6611752201639842,
+                "pred": 0.5834658685516484,
+                "err_pp": 7.770935161233583,
+                "position": "above",
+                "dist_pp": 5.822957789249927
+              }
+            ]
+          }
+        },
+        "safety_reasoning": {
+          "subset_mean": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 9.855221179060482,
+              "max_inside_pp": 19.909959873421844,
+              "mae_outside_pp": 18.005740246096792,
+              "max_outside_pp": 18.287073363812944,
+              "spearman_err_vs_distance": 0.5249007842757842
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.394775570272259,
+                "pred": 0.23786407766990292,
+                "err_pp": 15.69114926023561,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4315673289183223,
+                "pred": 0.38929440389294406,
+                "err_pp": 4.227292502537821,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.4297277409860191,
+                "pred": 0.30656934306569344,
+                "err_pp": 12.315839792032568,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.4010301692420898,
+                "pred": 0.2637889688249401,
+                "err_pp": 13.724120041714972,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5496688741721855,
+                "pred": 0.7487684729064039,
+                "err_pp": 19.909959873421844,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.48123620309050774,
+                "pred": 0.48655256723716384,
+                "err_pp": 0.5316364146656094,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.5754231052244297,
+                "pred": 0.7582938388625592,
+                "err_pp": 18.287073363812944,
+                "position": "above",
+                "dist_pp": 2.575423105224428
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.4326710816777042,
+                "pred": 0.4585365853658537,
+                "err_pp": 2.586550368814949,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.37380426784400295,
+                "pred": 0.19656019656019655,
+                "err_pp": 17.72440712838064,
+                "position": "below",
+                "dist_pp": 2.0971302428256067
+              }
+            ]
+          },
+          "irt_cal": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 2.0237894626003916,
+              "max_inside_pp": 3.582467426178937,
+              "mae_outside_pp": 5.034343183656861,
+              "max_outside_pp": 6.818748530420226,
+              "spearman_err_vs_distance": 0.5477225575051661
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.394775570272259,
+                "pred": 0.4033106485944934,
+                "err_pp": 0.853507832223438,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4315673289183223,
+                "pred": 0.4409999425938676,
+                "err_pp": 0.943261367554532,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.4297277409860191,
+                "pred": 0.4173407084130426,
+                "err_pp": 1.238703257297652,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.4010301692420898,
+                "pred": 0.42105019602360616,
+                "err_pp": 2.0020026781516376,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5496688741721855,
+                "pred": 0.5168403129861963,
+                "err_pp": 3.2828561185989202,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.48123620309050774,
+                "pred": 0.4585989275085315,
+                "err_pp": 2.2637275581976257,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.5754231052244297,
+                "pred": 0.5072356199202275,
+                "err_pp": 6.818748530420226,
+                "position": "above",
+                "dist_pp": 2.575423105224428
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.4326710816777042,
+                "pred": 0.46849575593949355,
+                "err_pp": 3.582467426178937,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.37380426784400295,
+                "pred": 0.4063036462129379,
+                "err_pp": 3.249937836893496,
+                "position": "below",
+                "dist_pp": 2.0971302428256067
+              }
+            ]
+          }
+        }
+      }
+    },
+    "200": {
+      "aggregate": {
+        "subset_mean": {
+          "summary": {
+            "n_inside": 7,
+            "n_outside": 2,
+            "mae_inside_pp": 2.377814316976228,
+            "max_inside_pp": 6.358185470635702,
+            "mae_outside_pp": 1.568731746756452,
+            "max_outside_pp": 2.9762428766777593,
+            "spearman_err_vs_distance": -0.04564354645876384
+          },
+          "rows": [
+            {
+              "model": "claude_opus",
+              "true": 0.5042651900628554,
+              "pred": 0.46708051166290443,
+              "err_pp": 3.718467839995099,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_flash",
+              "true": 0.5070338222089195,
+              "pred": 0.5183864915572233,
+              "err_pp": 1.1352669348303812,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_pro",
+              "true": 0.47452110146662674,
+              "pred": 0.44475867269984914,
+              "err_pp": 2.9762428766777593,
+              "position": "below",
+              "dist_pp": 2.974408859622868
+            },
+            {
+              "model": "gemma4_31b",
+              "true": 0.5222987129601916,
+              "pred": 0.5135235272323082,
+              "err_pp": 0.8775185727883383,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt4o",
+              "true": 0.512832984136486,
+              "pred": 0.5382165605095541,
+              "err_pp": 2.5383576373068095,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt54",
+              "true": 0.5083433103861119,
+              "pred": 0.5271698113207547,
+              "err_pp": 1.8826500934642776,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "llama4_maverick",
+              "true": 0.5742292726728524,
+              "pred": 0.6378111273792094,
+              "err_pp": 6.358185470635702,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "nemotron_12b",
+              "true": 0.5083807243340317,
+              "pred": 0.5097232610321616,
+              "err_pp": 0.13425366981298925,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "qwen35_122b",
+              "true": 0.5749027237354085,
+              "pred": 0.5732905175670571,
+              "err_pp": 0.16122061683514488,
+              "position": "above",
+              "dist_pp": 0.06734510625561185
+            }
+          ]
+        },
+        "irt_cal": {
+          "summary": {
+            "n_inside": 7,
+            "n_outside": 2,
+            "mae_inside_pp": 1.176736816074905,
+            "max_inside_pp": 2.685450998493155,
+            "mae_outside_pp": 2.2082658946490863,
+            "max_outside_pp": 3.9631615004205867,
+            "spearman_err_vs_distance": 0.25103950552320115
+          },
+          "rows": [
+            {
+              "model": "claude_opus",
+              "true": 0.5042651900628554,
+              "pred": 0.5006049813072156,
+              "err_pp": 0.3660208755639771,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_flash",
+              "true": 0.5070338222089195,
+              "pred": 0.5044118725064981,
+              "err_pp": 0.26219497024213556,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_pro",
+              "true": 0.47452110146662674,
+              "pred": 0.4790548043554026,
+              "err_pp": 0.4533702888775859,
+              "position": "below",
+              "dist_pp": 2.974408859622868
+            },
+            {
+              "model": "gemma4_31b",
+              "true": 0.5222987129601916,
+              "pred": 0.5405494567969757,
+              "err_pp": 1.8250743836784156,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt4o",
+              "true": 0.512832984136486,
+              "pred": 0.5169769841054385,
+              "err_pp": 0.41439999689524276,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt54",
+              "true": 0.5083433103861119,
+              "pred": 0.5179443931093933,
+              "err_pp": 0.9601082723281418,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "llama4_maverick",
+              "true": 0.5742292726728524,
+              "pred": 0.5569901905196197,
+              "err_pp": 1.7239082153232665,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "nemotron_12b",
+              "true": 0.5083807243340317,
+              "pred": 0.5352352343189632,
+              "err_pp": 2.685450998493155,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "qwen35_122b",
+              "true": 0.5749027237354085,
+              "pred": 0.5352711087312026,
+              "err_pp": 3.9631615004205867,
+              "position": "above",
+              "dist_pp": 0.06734510625561185
+            }
+          ]
+        },
+        "gp_cal": {
+          "summary": {
+            "n_inside": 7,
+            "n_outside": 2,
+            "mae_inside_pp": 1.0646235515646472,
+            "max_inside_pp": 1.920091799889101,
+            "mae_outside_pp": 1.699046448066982,
+            "max_outside_pp": 2.8225792353449464,
+            "spearman_err_vs_distance": 0.02282177322938192
+          },
+          "rows": [
+            {
+              "model": "claude_opus",
+              "true": 0.5042651900628554,
+              "pred": 0.4905476404139223,
+              "err_pp": 1.3717549648933125,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_flash",
+              "true": 0.5070338222089195,
+              "pred": 0.5086042582217156,
+              "err_pp": 0.15704360127961614,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_pro",
+              "true": 0.47452110146662674,
+              "pred": 0.46876596485873656,
+              "err_pp": 0.5755136607890177,
+              "position": "below",
+              "dist_pp": 2.974408859622868
+            },
+            {
+              "model": "gemma4_31b",
+              "true": 0.5222987129601916,
+              "pred": 0.5324416779275755,
+              "err_pp": 1.0142964967383872,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt4o",
+              "true": 0.512832984136486,
+              "pred": 0.5233488570266731,
+              "err_pp": 1.0515872890187072,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt54",
+              "true": 0.5083433103861119,
+              "pred": 0.5207120185728018,
+              "err_pp": 1.2368708186689892,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "llama4_maverick",
+              "true": 0.5742292726728524,
+              "pred": 0.5812364715774966,
+              "err_pp": 0.7007198904644185,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "nemotron_12b",
+              "true": 0.5083807243340317,
+              "pred": 0.5275816423329227,
+              "err_pp": 1.920091799889101,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "qwen35_122b",
+              "true": 0.5749027237354085,
+              "pred": 0.546676931381959,
+              "err_pp": 2.8225792353449464,
+              "position": "above",
+              "dist_pp": 0.06734510625561185
+            }
+          ]
+        }
+      },
+      "sub_scores": {
+        "recognition": {
+          "subset_mean": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 3.386891025747542,
+              "max_inside_pp": 6.570925366809682,
+              "mae_outside_pp": 4.162606807756358,
+              "max_outside_pp": 7.926393465447623,
+              "spearman_err_vs_distance": 0.09128709291752768
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.5185960591133005,
+                "pred": 0.4724462365591398,
+                "err_pp": 4.614982255416073,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4392857142857143,
+                "pred": 0.39731543624161075,
+                "err_pp": 4.197027804410353,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.35517241379310344,
+                "pred": 0.2759084791386272,
+                "err_pp": 7.926393465447623,
+                "position": "below",
+                "dist_pp": 3.1773399014778327
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5380541871921182,
+                "pred": 0.5277777777777778,
+                "err_pp": 1.0276409414340382,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5480295566502463,
+                "pred": 0.5260695187165776,
+                "err_pp": 2.196003793366874,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.38694581280788176,
+                "pred": 0.32123655913978494,
+                "err_pp": 6.570925366809682,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.526847290640394,
+                "pred": 0.4953947368421053,
+                "err_pp": 3.1452553798288765,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.47216748768472905,
+                "pred": 0.45260347129506007,
+                "err_pp": 1.9564016389668981,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.5695812807881774,
+                "pred": 0.5735694822888283,
+                "err_pp": 0.3988201500650934,
+                "position": "above",
+                "dist_pp": 2.155172413793105
+              }
+            ]
+          },
+          "irt_cal": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 2.5527673651602902,
+              "max_inside_pp": 6.6896203132263965,
+              "mae_outside_pp": 4.887564841880946,
+              "max_outside_pp": 6.151535113680135,
+              "spearman_err_vs_distance": 0.5249007842757842
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.5185960591133005,
+                "pred": 0.48910996902048415,
+                "err_pp": 2.948609009281639,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4392857142857143,
+                "pred": 0.4297148835735141,
+                "err_pp": 0.9570830712200162,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.35517241379310344,
+                "pred": 0.4166877649299048,
+                "err_pp": 6.151535113680135,
+                "position": "below",
+                "dist_pp": 3.1773399014778327
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5380541871921182,
+                "pred": 0.5381740628478939,
+                "err_pp": 0.011987565577575854,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5480295566502463,
+                "pred": 0.5267476207171,
+                "err_pp": 2.128193593314631,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.38694581280788176,
+                "pred": 0.4128096094923778,
+                "err_pp": 2.5863796684496068,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.526847290640394,
+                "pred": 0.5013723072898724,
+                "err_pp": 2.5474983350521674,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.47216748768472905,
+                "pred": 0.539063690816993,
+                "err_pp": 6.6896203132263965,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.5695812807881774,
+                "pred": 0.5333453350873598,
+                "err_pp": 3.6235945700817562,
+                "position": "above",
+                "dist_pp": 2.155172413793105
+              }
+            ]
+          }
+        },
+        "perception_detail": {
+          "subset_mean": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 3.89786829612632,
+              "max_inside_pp": 7.835747387582382,
+              "mae_outside_pp": 2.838456774995715,
+              "max_outside_pp": 5.6373728349431325,
+              "spearman_err_vs_distance": -0.27386127875258304
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.540616459155785,
+                "pred": 0.5547445255474452,
+                "err_pp": 1.41280663916602,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.5799423018524142,
+                "pred": 0.6309090909090909,
+                "err_pp": 5.0966789056676625,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.5665806255693896,
+                "pred": 0.5882137628111274,
+                "err_pp": 2.1633137241737765,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5626328575766778,
+                "pred": 0.6027397260273972,
+                "err_pp": 4.010686845071943,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.4759337989675068,
+                "pred": 0.4763292061179898,
+                "err_pp": 0.03954071504829737,
+                "position": "below",
+                "dist_pp": 6.468266018827823
+              },
+              {
+                "model": "gpt54",
+                "true": 0.5943668387488612,
+                "pred": 0.6563876651982379,
+                "err_pp": 6.202082644937668,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.602945642271485,
+                "pred": 0.6813031161473088,
+                "err_pp": 7.835747387582382,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.5619495900394776,
+                "pred": 0.5675872093023255,
+                "err_pp": 0.5637619262847893,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.6611752201639842,
+                "pred": 0.7175489485134156,
+                "err_pp": 5.6373728349431325,
+                "position": "above",
+                "dist_pp": 5.822957789249927
+              }
+            ]
+          },
+          "irt_cal": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 1.7834884112292073,
+              "max_inside_pp": 3.920522344095956,
+              "mae_outside_pp": 7.499858417858121,
+              "max_outside_pp": 7.853439468616807,
+              "spearman_err_vs_distance": 0.7074749701108396
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.540616459155785,
+                "pred": 0.5798216825967446,
+                "err_pp": 3.920522344095956,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.5799423018524142,
+                "pred": 0.5838519632933807,
+                "err_pp": 0.3909661440966494,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.5665806255693896,
+                "pred": 0.5855181297454372,
+                "err_pp": 1.893750417604756,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5626328575766778,
+                "pred": 0.586107581942792,
+                "err_pp": 2.3474724366114197,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.4759337989675068,
+                "pred": 0.5473965726385012,
+                "err_pp": 7.146277367099435,
+                "position": "below",
+                "dist_pp": 6.468266018827823
+              },
+              {
+                "model": "gpt54",
+                "true": 0.5943668387488612,
+                "pred": 0.5943455734924759,
+                "err_pp": 0.002126525638534993,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.602945642271485,
+                "pred": 0.5694531270744329,
+                "err_pp": 3.3492515197052097,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.5619495900394776,
+                "pred": 0.5561462951309584,
+                "err_pp": 0.5803294908519274,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.6611752201639842,
+                "pred": 0.5826408254778161,
+                "err_pp": 7.853439468616807,
+                "position": "above",
+                "dist_pp": 5.822957789249927
+              }
+            ]
+          }
+        },
+        "safety_reasoning": {
+          "subset_mean": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 8.65464692033567,
+              "max_inside_pp": 16.018514042635466,
+              "mae_outside_pp": 15.971760110646931,
+              "max_outside_pp": 17.342973600879695,
+              "spearman_err_vs_distance": 0.47925723781702034
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.394775570272259,
+                "pred": 0.23897058823529413,
+                "err_pp": 15.580498203696488,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4315673289183223,
+                "pred": 0.4,
+                "err_pp": 3.1567328918322257,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.4297277409860191,
+                "pred": 0.3149171270718232,
+                "err_pp": 11.481061391419594,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.4010301692420898,
+                "pred": 0.2715827338129496,
+                "err_pp": 12.944743542914017,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5496688741721855,
+                "pred": 0.7098540145985401,
+                "err_pp": 16.018514042635466,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.48123620309050774,
+                "pred": 0.4852941176470588,
+                "err_pp": 0.4057914556551079,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.5754231052244297,
+                "pred": 0.7214285714285714,
+                "err_pp": 14.600546620414168,
+                "position": "above",
+                "dist_pp": 2.575423105224428
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.4326710816777042,
+                "pred": 0.4426229508196721,
+                "err_pp": 0.995186914196794,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.37380426784400295,
+                "pred": 0.20037453183520598,
+                "err_pp": 17.342973600879695,
+                "position": "below",
+                "dist_pp": 2.0971302428256067
+              }
+            ]
+          },
+          "irt_cal": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 1.9120154882941474,
+              "max_inside_pp": 3.794846022486187,
+              "mae_outside_pp": 4.6866872931004195,
+              "max_outside_pp": 6.123436749307343,
+              "spearman_err_vs_distance": 0.6390096504226938
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.394775570272259,
+                "pred": 0.4049810513626152,
+                "err_pp": 1.0205481090356183,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4315673289183223,
+                "pred": 0.43865823419240324,
+                "err_pp": 0.7090905274080961,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.4297277409860191,
+                "pred": 0.42000751903884914,
+                "err_pp": 0.9720221947169982,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.4010301692420898,
+                "pred": 0.4192901092013226,
+                "err_pp": 1.8259939959232807,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5496688741721855,
+                "pred": 0.5204226364668323,
+                "err_pp": 2.9246237705353173,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.48123620309050774,
+                "pred": 0.4598663651109724,
+                "err_pp": 2.136983797953534,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.5754231052244297,
+                "pred": 0.5141887377313563,
+                "err_pp": 6.123436749307343,
+                "position": "above",
+                "dist_pp": 2.575423105224428
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.4326710816777042,
+                "pred": 0.47061954190256605,
+                "err_pp": 3.794846022486187,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.37380426784400295,
+                "pred": 0.4063036462129379,
+                "err_pp": 3.249937836893496,
+                "position": "below",
+                "dist_pp": 2.0971302428256067
+              }
+            ]
+          }
+        }
+      }
+    },
+    "300": {
+      "aggregate": {
+        "subset_mean": {
+          "summary": {
+            "n_inside": 7,
+            "n_outside": 2,
+            "mae_inside_pp": 1.7423680301641171,
+            "max_inside_pp": 3.912278247139067,
+            "mae_outside_pp": 1.253527670566229,
+            "max_outside_pp": 2.2058177737813156,
+            "spearman_err_vs_distance": -0.04564354645876384
+          },
+          "rows": [
+            {
+              "model": "claude_opus",
+              "true": 0.5042651900628554,
+              "pred": 0.4756450763559768,
+              "err_pp": 2.8620113706878616,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_flash",
+              "true": 0.5070338222089195,
+              "pred": 0.5141310089804543,
+              "err_pp": 0.7097186771534814,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_pro",
+              "true": 0.47452110146662674,
+              "pred": 0.4524629237288136,
+              "err_pp": 2.2058177737813156,
+              "position": "below",
+              "dist_pp": 2.974408859622868
+            },
+            {
+              "model": "gemma4_31b",
+              "true": 0.5222987129601916,
+              "pred": 0.5102119958634953,
+              "err_pp": 1.2086717096696287,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt4o",
+              "true": 0.512832984136486,
+              "pred": 0.5335195530726257,
+              "err_pp": 2.0686568936139627,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt54",
+              "true": 0.5083433103861119,
+              "pred": 0.5215139442231076,
+              "err_pp": 1.3170633836995682,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "llama4_maverick",
+              "true": 0.5742292726728524,
+              "pred": 0.6133520551442431,
+              "err_pp": 3.912278247139067,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "nemotron_12b",
+              "true": 0.5083807243340317,
+              "pred": 0.5095624836258842,
+              "err_pp": 0.1181759291852491,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "qwen35_122b",
+              "true": 0.5749027237354085,
+              "pred": 0.5779150994089199,
+              "err_pp": 0.3012375673511425,
+              "position": "above",
+              "dist_pp": 0.06734510625561185
+            }
+          ]
+        },
+        "irt_cal": {
+          "summary": {
+            "n_inside": 7,
+            "n_outside": 2,
+            "mae_inside_pp": 1.2785140235418342,
+            "max_inside_pp": 2.63684297978799,
+            "mae_outside_pp": 2.568398214755491,
+            "max_outside_pp": 3.56685002879924,
+            "spearman_err_vs_distance": 0.59336610396393
+          },
+          "rows": [
+            {
+              "model": "claude_opus",
+              "true": 0.5042651900628554,
+              "pred": 0.49626094409194765,
+              "err_pp": 0.8004245970907764,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_flash",
+              "true": 0.5070338222089195,
+              "pred": 0.5024952304149076,
+              "err_pp": 0.4538591794011837,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_pro",
+              "true": 0.47452110146662674,
+              "pred": 0.49022056547374415,
+              "err_pp": 1.5699464007117414,
+              "position": "below",
+              "dist_pp": 2.974408859622868
+            },
+            {
+              "model": "gemma4_31b",
+              "true": 0.5222987129601916,
+              "pred": 0.5370231550745016,
+              "err_pp": 1.472444211431001,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt4o",
+              "true": 0.512832984136486,
+              "pred": 0.5268219252519635,
+              "err_pp": 1.3988941115477438,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt54",
+              "true": 0.5083433103861119,
+              "pred": 0.5176621345143992,
+              "err_pp": 0.9318824128287329,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "llama4_maverick",
+              "true": 0.5742292726728524,
+              "pred": 0.5616767659457983,
+              "err_pp": 1.2552506727054102,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "nemotron_12b",
+              "true": 0.5083807243340317,
+              "pred": 0.5347491541319116,
+              "err_pp": 2.63684297978799,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "qwen35_122b",
+              "true": 0.5749027237354085,
+              "pred": 0.5392342234474161,
+              "err_pp": 3.56685002879924,
+              "position": "above",
+              "dist_pp": 0.06734510625561185
+            }
+          ]
+        },
+        "gp_cal": {
+          "summary": {
+            "n_inside": 7,
+            "n_outside": 2,
+            "mae_inside_pp": 1.002186629259743,
+            "max_inside_pp": 1.8812428646071688,
+            "mae_outside_pp": 1.4218204491589725,
+            "max_outside_pp": 2.406423749954123,
+            "spearman_err_vs_distance": 0.13693063937629152
+          },
+          "rows": [
+            {
+              "model": "claude_opus",
+              "true": 0.5042651900628554,
+              "pred": 0.49007618377115636,
+              "err_pp": 1.4189006291699058,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_flash",
+              "true": 0.5070338222089195,
+              "pred": 0.5059859639845716,
+              "err_pp": 0.10478582243478307,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gemini25_pro",
+              "true": 0.47452110146662674,
+              "pred": 0.47889327295026496,
+              "err_pp": 0.4372171483638221,
+              "position": "below",
+              "dist_pp": 2.974408859622868
+            },
+            {
+              "model": "gemma4_31b",
+              "true": 0.5222987129601916,
+              "pred": 0.5289798073111998,
+              "err_pp": 0.6681094351008166,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt4o",
+              "true": 0.512832984136486,
+              "pred": 0.5288312135981621,
+              "err_pp": 1.5998229461676061,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "gpt54",
+              "true": 0.5083433103861119,
+              "pred": 0.5188176774270118,
+              "err_pp": 1.047436704089988,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "llama4_maverick",
+              "true": 0.5742292726728524,
+              "pred": 0.5771793527053317,
+              "err_pp": 0.29500800324793186,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "nemotron_12b",
+              "true": 0.5083807243340317,
+              "pred": 0.5271931529801034,
+              "err_pp": 1.8812428646071688,
+              "position": "inside",
+              "dist_pp": 0.0
+            },
+            {
+              "model": "qwen35_122b",
+              "true": 0.5749027237354085,
+              "pred": 0.5508384862358673,
+              "err_pp": 2.406423749954123,
+              "position": "above",
+              "dist_pp": 0.06734510625561185
+            }
+          ]
+        }
+      },
+      "sub_scores": {
+        "recognition": {
+          "subset_mean": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 3.2147739793027683,
+              "max_inside_pp": 4.690839466008007,
+              "mae_outside_pp": 3.104479984508918,
+              "max_outside_pp": 6.10547667342799,
+              "spearman_err_vs_distance": 0.09128709291752768
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.5185960591133005,
+                "pred": 0.479108635097493,
+                "err_pp": 3.9487424015807515,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4392857142857143,
+                "pred": 0.39748369058713884,
+                "err_pp": 4.180202369857544,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.35517241379310344,
+                "pred": 0.29411764705882354,
+                "err_pp": 6.10547667342799,
+                "position": "below",
+                "dist_pp": 3.1773399014778327
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5380541871921182,
+                "pred": 0.5247026532479414,
+                "err_pp": 1.3351533944176763,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5480295566502463,
+                "pred": 0.5234082397003745,
+                "err_pp": 2.4621316949871797,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.38694581280788176,
+                "pred": 0.3400374181478017,
+                "err_pp": 4.690839466008007,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.526847290640394,
+                "pred": 0.4858576642335766,
+                "err_pp": 4.098962640681742,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.47216748768472905,
+                "pred": 0.45429362880886426,
+                "err_pp": 1.787385887586479,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.5695812807881774,
+                "pred": 0.5706161137440758,
+                "err_pp": 0.1034832955898457,
+                "position": "above",
+                "dist_pp": 2.155172413793105
+              }
+            ]
+          },
+          "irt_cal": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 2.5536581569794805,
+              "max_inside_pp": 6.590365493327644,
+              "mae_outside_pp": 5.102124829811819,
+              "max_outside_pp": 6.151535113680135,
+              "spearman_err_vs_distance": 0.5249007842757842
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.5185960591133005,
+                "pred": 0.48703474852074014,
+                "err_pp": 3.15613105925604,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4392857142857143,
+                "pred": 0.4298045585257699,
+                "err_pp": 0.9481155759944404,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.35517241379310344,
+                "pred": 0.4166877649299048,
+                "err_pp": 6.151535113680135,
+                "position": "below",
+                "dist_pp": 3.1773399014778327
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5380541871921182,
+                "pred": 0.5316817348624034,
+                "err_pp": 0.6372452329714728,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5480295566502463,
+                "pred": 0.5311836852834553,
+                "err_pp": 1.6845871366791054,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.38694581280788176,
+                "pred": 0.4128137022138944,
+                "err_pp": 2.5867889406012647,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.526847290640394,
+                "pred": 0.5041235540401301,
+                "err_pp": 2.2723736600263944,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.47216748768472905,
+                "pred": 0.5380711426180055,
+                "err_pp": 6.590365493327644,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.5695812807881774,
+                "pred": 0.5290541353287423,
+                "err_pp": 4.052714545943504,
+                "position": "above",
+                "dist_pp": 2.155172413793105
+              }
+            ]
+          }
+        },
+        "perception_detail": {
+          "subset_mean": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 3.4762039656223935,
+              "max_inside_pp": 5.18691725433299,
+              "mae_outside_pp": 3.245273156071965,
+              "max_outside_pp": 6.372017732555557,
+              "spearman_err_vs_distance": -0.09128709291752768
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.540616459155785,
+                "pred": 0.5599279835390947,
+                "err_pp": 1.931152438330963,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.5799423018524142,
+                "pred": 0.6262886597938144,
+                "err_pp": 4.634635794140019,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.5665806255693896,
+                "pred": 0.5897104446742503,
+                "err_pp": 2.312981910486067,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5626328575766778,
+                "pred": 0.5963673057517659,
+                "err_pp": 3.3734448175088083,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.4759337989675068,
+                "pred": 0.47711908476339054,
+                "err_pp": 0.11852857958837282,
+                "position": "below",
+                "dist_pp": 6.468266018827823
+              },
+              {
+                "model": "gpt54",
+                "true": 0.5943668387488612,
+                "pred": 0.6450441100155683,
+                "err_pp": 5.067727126670707,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.602945642271485,
+                "pred": 0.6548148148148148,
+                "err_pp": 5.18691725433299,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.5619495900394776,
+                "pred": 0.5802152742183496,
+                "err_pp": 1.8265684178871977,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.6611752201639842,
+                "pred": 0.7248953974895398,
+                "err_pp": 6.372017732555557,
+                "position": "above",
+                "dist_pp": 5.822957789249927
+              }
+            ]
+          },
+          "irt_cal": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 1.7580171005809568,
+              "max_inside_pp": 3.8285112284099365,
+              "mae_outside_pp": 7.472005838119214,
+              "max_outside_pp": 7.535583274092739,
+              "spearman_err_vs_distance": 0.7074749701108396
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.540616459155785,
+                "pred": 0.5789015714398844,
+                "err_pp": 3.8285112284099365,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.5799423018524142,
+                "pred": 0.5835098707283115,
+                "err_pp": 0.35675688758972646,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.5665806255693896,
+                "pred": 0.5857184024991744,
+                "err_pp": 1.91377769297848,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.5626328575766778,
+                "pred": 0.586107581942792,
+                "err_pp": 2.3474724366114197,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.4759337989675068,
+                "pred": 0.5500180829889637,
+                "err_pp": 7.408428402145689,
+                "position": "below",
+                "dist_pp": 6.468266018827823
+              },
+              {
+                "model": "gpt54",
+                "true": 0.5943668387488612,
+                "pred": 0.5950113332476741,
+                "err_pp": 0.06444944988128753,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.602945642271485,
+                "pred": 0.5701352517407612,
+                "err_pp": 3.2810390530723765,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.5619495900394776,
+                "pred": 0.5568084604842429,
+                "err_pp": 0.5141129555234714,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.6611752201639842,
+                "pred": 0.5858193874230568,
+                "err_pp": 7.535583274092739,
+                "position": "above",
+                "dist_pp": 5.822957789249927
+              }
+            ]
+          }
+        },
+        "safety_reasoning": {
+          "subset_mean": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 8.262125341271528,
+              "max_inside_pp": 13.913320916114792,
+              "mae_outside_pp": 13.295210415580478,
+              "max_outside_pp": 15.791022810890363,
+              "spearman_err_vs_distance": 0.3651483716701107
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.394775570272259,
+                "pred": 0.25997425997426,
+                "err_pp": 13.480131029799903,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4315673289183223,
+                "pred": 0.3945666235446313,
+                "err_pp": 3.7000705373690987,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.4297277409860191,
+                "pred": 0.32814526588845655,
+                "err_pp": 10.158247509756258,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.4010301692420898,
+                "pred": 0.27490542244640603,
+                "err_pp": 12.612474679568376,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5496688741721855,
+                "pred": 0.6888020833333334,
+                "err_pp": 13.913320916114792,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.48123620309050774,
+                "pred": 0.46423927178153446,
+                "err_pp": 1.6996931308973284,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.5754231052244297,
+                "pred": 0.6834170854271356,
+                "err_pp": 10.79939802027059,
+                "position": "above",
+                "dist_pp": 2.575423105224428
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.4326710816777042,
+                "pred": 0.4099616858237548,
+                "err_pp": 2.2709395853949377,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.37380426784400295,
+                "pred": 0.21589403973509932,
+                "err_pp": 15.791022810890363,
+                "position": "below",
+                "dist_pp": 2.0971302428256067
+              }
+            ]
+          },
+          "irt_cal": {
+            "summary": {
+              "n_inside": 7,
+              "n_outside": 2,
+              "mae_inside_pp": 1.9780806844282988,
+              "max_inside_pp": 3.582467426178937,
+              "mae_outside_pp": 4.6866872931004195,
+              "max_outside_pp": 6.123436749307343,
+              "spearman_err_vs_distance": 0.6390096504226938
+            },
+            "rows": [
+              {
+                "model": "claude_opus",
+                "true": 0.394775570272259,
+                "pred": 0.4049810513626152,
+                "err_pp": 1.0205481090356183,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_flash",
+                "true": 0.4315673289183223,
+                "pred": 0.44159267774494493,
+                "err_pp": 1.0025348826622649,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemini25_pro",
+                "true": 0.4297277409860191,
+                "pred": 0.4426636576293804,
+                "err_pp": 1.29359166433613,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gemma4_31b",
+                "true": 0.4010301692420898,
+                "pred": 0.4192790766867077,
+                "err_pp": 1.8248907444617934,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt4o",
+                "true": 0.5496688741721855,
+                "pred": 0.5198133925084873,
+                "err_pp": 2.9855481663698114,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "gpt54",
+                "true": 0.48123620309050774,
+                "pred": 0.4598663651109724,
+                "err_pp": 2.136983797953534,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "llama4_maverick",
+                "true": 0.5754231052244297,
+                "pred": 0.5141887377313563,
+                "err_pp": 6.123436749307343,
+                "position": "above",
+                "dist_pp": 2.575423105224428
+              },
+              {
+                "model": "nemotron_12b",
+                "true": 0.4326710816777042,
+                "pred": 0.46849575593949355,
+                "err_pp": 3.582467426178937,
+                "position": "inside",
+                "dist_pp": 0.0
+              },
+              {
+                "model": "qwen35_122b",
+                "true": 0.37380426784400295,
+                "pred": 0.4063036462129379,
+                "err_pp": 3.249937836893496,
+                "position": "below",
+                "dist_pp": 2.0971302428256067
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

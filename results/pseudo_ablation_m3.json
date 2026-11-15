@@ -1,0 +1,44 @@
+{
+  "steps": 4000,
+  "n": 150,
+  "conditions": {
+    "base_only": {
+      "n_respondents": 9,
+      "fit_seconds": 87.4,
+      "item_param_posterior_sd": {
+        "a": 1.5706,
+        "b": 1.0352,
+        "k0": 1.2582,
+        "k1": 1.3098
+      },
+      "ability_vs_truescore_corr": 0.939,
+      "downstream_mae_n150": 0.0123,
+      "downstream_tau_n150": 0.667
+    },
+    "augmented": {
+      "n_respondents": 20,
+      "fit_seconds": 51.3,
+      "item_param_posterior_sd": {
+        "a": 1.3533,
+        "b": 0.9806,
+        "k0": 1.2414,
+        "k1": 1.2943
+      },
+      "ability_vs_truescore_corr": 0.913,
+      "downstream_mae_n150": 0.0141,
+      "downstream_tau_n150": 0.833
+    }
+  },
+  "agreement_corr": {
+    "a": 0.943,
+    "b": 0.982,
+    "k0": 0.982,
+    "k1": 0.98
+  },
+  "sd_shrinkage_pct": {
+    "a": 13.8,
+    "b": 5.3,
+    "k0": 1.3,
+    "k1": 1.2
+  }
+}

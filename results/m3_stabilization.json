@@ -1,0 +1,108 @@
+{
+  "steps": 3000,
+  "seeds": 2,
+  "rotations": {
+    "gemma4_31b": {
+      "m2_elbo": 93009.609375,
+      "m2_seconds": 74.5,
+      "configs": {
+        "baseline": {
+          "finite": false,
+          "error": "all SVI seeds diverged after 0 backoffs (lr floor 0.01)",
+          "seconds": 40.2
+        },
+        "median_init": {
+          "finite": true,
+          "final_elbo": 90691.71875,
+          "seed": 1,
+          "lr": 0.01,
+          "seconds": 40.5,
+          "first_nonfinite_step": null,
+          "loss_at_10pct": 92840.3125,
+          "loss_at_50pct": 90543.171875,
+          "omega": [
+            [
+              1.0,
+              -0.14100000262260437,
+              -0.30000001192092896
+            ],
+            [
+              -0.14100000262260437,
+              1.0,
+              -0.5649999976158142
+            ],
+            [
+              -0.30000001192092896,
+              -0.5649999976158142,
+              1.0
+            ]
+          ]
+        },
+        "lowlr": {
+          "finite": false,
+          "error": "all SVI seeds diverged after 0 backoffs (lr floor 0.005)",
+          "seconds": 37.2
+        },
+        "warm": {
+          "finite": true,
+          "final_elbo": 90688.25,
+          "seed": 1,
+          "lr": 0.01,
+          "seconds": 34.8,
+          "first_nonfinite_step": null,
+          "loss_at_10pct": 93024.0234375,
+          "loss_at_50pct": 90556.015625,
+          "omega": [
+            [
+              1.0,
+              -0.23600000143051147,
+              -0.2549999952316284
+            ],
+            [
+              -0.23600000143051147,
+              1.0,
+              -0.8199999928474426
+            ],
+            [
+              -0.2549999952316284,
+              -0.8199999928474426,
+              1.0
+            ]
+          ]
+        },
+        "warm_decay": {
+          "finite": true,
+          "final_elbo": 90097.515625,
+          "seed": 0,
+          "lr": 0.01,
+          "seconds": 33.8,
+          "first_nonfinite_step": null,
+          "loss_at_10pct": 94074.046875,
+          "loss_at_50pct": 90244.75,
+          "omega": [
+            [
+              1.0,
+              0.0010000000474974513,
+              -0.4650000035762787
+            ],
+            [
+              0.0010000000474974513,
+              1.0,
+              -0.8059999942779541
+            ],
+            [
+              -0.4650000035762787,
+              -0.8059999942779541,
+              1.0
+            ]
+          ]
+        },
+        "warm_lowrank": {
+          "finite": false,
+          "error": "all SVI seeds diverged after 0 backoffs (lr floor 0.01)",
+          "seconds": 85.7
+        }
+      }
+    }
+  }
+}

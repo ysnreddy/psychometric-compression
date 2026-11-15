@@ -1,0 +1,1129 @@
+{
+  "n_models": 9,
+  "n_clips": 1345,
+  "n_boot": 2000,
+  "models": [
+    "claude_opus",
+    "gemini25_flash",
+    "gemini25_pro",
+    "gemma4_31b",
+    "gpt4o",
+    "gpt54",
+    "llama4_maverick",
+    "nemotron_12b",
+    "qwen35_122b"
+  ],
+  "full_scores": {
+    "recognition": {
+      "claude_opus": 0.5186,
+      "gemini25_flash": 0.4393,
+      "gemini25_pro": 0.3552,
+      "gemma4_31b": 0.5381,
+      "gpt4o": 0.548,
+      "gpt54": 0.3869,
+      "llama4_maverick": 0.5268,
+      "nemotron_12b": 0.4722,
+      "qwen35_122b": 0.5696
+    },
+    "perception_detail": {
+      "claude_opus": 0.5406,
+      "gemini25_flash": 0.5799,
+      "gemini25_pro": 0.5666,
+      "gemma4_31b": 0.5626,
+      "gpt4o": 0.4759,
+      "gpt54": 0.5944,
+      "llama4_maverick": 0.6029,
+      "nemotron_12b": 0.5619,
+      "qwen35_122b": 0.6612
+    },
+    "safety_reasoning": {
+      "claude_opus": 0.3948,
+      "gemini25_flash": 0.4316,
+      "gemini25_pro": 0.4297,
+      "gemma4_31b": 0.401,
+      "gpt4o": 0.5497,
+      "gpt54": 0.4812,
+      "llama4_maverick": 0.5754,
+      "nemotron_12b": 0.4327,
+      "qwen35_122b": 0.3738
+    },
+    "aggregate": {
+      "claude_opus": 0.5043,
+      "gemini25_flash": 0.507,
+      "gemini25_pro": 0.4745,
+      "gemma4_31b": 0.5223,
+      "gpt4o": 0.5128,
+      "gpt54": 0.5083,
+      "llama4_maverick": 0.5742,
+      "nemotron_12b": 0.5084,
+      "qwen35_122b": 0.5749
+    }
+  },
+  "bootstrap_se": {
+    "recognition": {
+      "claude_opus": 0.0077,
+      "gemini25_flash": 0.008,
+      "gemini25_pro": 0.0076,
+      "gemma4_31b": 0.0077,
+      "gpt4o": 0.0077,
+      "gpt54": 0.0076,
+      "llama4_maverick": 0.0076,
+      "nemotron_12b": 0.0075,
+      "qwen35_122b": 0.0077
+    },
+    "perception_detail": {
+      "claude_opus": 0.0073,
+      "gemini25_flash": 0.0075,
+      "gemini25_pro": 0.0071,
+      "gemma4_31b": 0.0078,
+      "gpt4o": 0.0073,
+      "gpt54": 0.0071,
+      "llama4_maverick": 0.0087,
+      "nemotron_12b": 0.0083,
+      "qwen35_122b": 0.0079
+    },
+    "safety_reasoning": {
+      "claude_opus": 0.0115,
+      "gemini25_flash": 0.0121,
+      "gemini25_pro": 0.0117,
+      "gemma4_31b": 0.0113,
+      "gpt4o": 0.012,
+      "gpt54": 0.0119,
+      "llama4_maverick": 0.0114,
+      "nemotron_12b": 0.011,
+      "qwen35_122b": 0.0121
+    },
+    "aggregate": {
+      "claude_opus": 0.0054,
+      "gemini25_flash": 0.0055,
+      "gemini25_pro": 0.0051,
+      "gemma4_31b": 0.0058,
+      "gpt4o": 0.0055,
+      "gpt54": 0.0052,
+      "llama4_maverick": 0.0058,
+      "nemotron_12b": 0.0058,
+      "qwen35_122b": 0.0057
+    }
+  },
+  "within_dimension": {
+    "recognition": {
+      "tau_boot_vs_full_mean": 0.9798445701461633,
+      "tau_boot_vs_full_q05_q95": [
+        0.9444444444444445,
+        1.0
+      ],
+      "tau_boot_vs_boot_mean": 0.9657423316636031,
+      "split_half_tau_mean": 0.9580122343771211,
+      "split_half_pearson_mean": 0.9892984734600119,
+      "spearman_brown_reliability": 0.9946204520423851,
+      "score_range_pp": 21.440886699507395,
+      "median_se_pp": 0.7660972165625828,
+      "adjacent_gap_over_se": [
+        1.99,
+        0.92,
+        1.03,
+        0.76,
+        4.34,
+        3.01,
+        4.74,
+        2.94
+      ],
+      "n_adjacent_pairs_gt_2se": 4,
+      "n_pairs_stable_95": 33,
+      "n_pairs": 36
+    },
+    "perception_detail": {
+      "tau_boot_vs_full_mean": 0.9323425035661705,
+      "tau_boot_vs_full_q05_q95": [
+        0.8333333333333334,
+        1.0
+      ],
+      "tau_boot_vs_boot_mean": 0.9097303178893542,
+      "split_half_tau_mean": 0.8698597694661394,
+      "split_half_pearson_mean": 0.9815866583254271,
+      "spearman_brown_reliability": 0.9907077787402276,
+      "score_range_pp": 18.524142119647742,
+      "median_se_pp": 0.7482049698259262,
+      "adjacent_gap_over_se": [
+        4.96,
+        0.77,
+        1.4,
+        1.29,
+        0.37,
+        0.06,
+        1.93,
+        6.25
+      ],
+      "n_adjacent_pairs_gt_2se": 2,
+      "n_pairs_stable_95": 32,
+      "n_pairs": 36
+    },
+    "safety_reasoning": {
+      "tau_boot_vs_full_mean": 0.9072608546109664,
+      "tau_boot_vs_full_q05_q95": [
+        0.7777777777777778,
+        1.0
+      ],
+      "tau_boot_vs_boot_mean": 0.8914407828663096,
+      "split_half_tau_mean": 0.8120511963482747,
+      "split_half_pearson_mean": 0.9706510826574911,
+      "spearman_brown_reliability": 0.9851069945355669,
+      "score_range_pp": 20.16188373804268,
+      "median_se_pp": 1.1731100911361925,
+      "adjacent_gap_over_se": [
+        1.55,
+        4.05,
+        3.0,
+        0.07,
+        0.11,
+        1.76,
+        0.39,
+        1.26
+      ],
+      "n_adjacent_pairs_gt_2se": 2,
+      "n_pairs_stable_95": 32,
+      "n_pairs": 36
+    },
+    "aggregate": {
+      "tau_boot_vs_full_mean": 0.8122063756672756,
+      "tau_boot_vs_full_q05_q95": [
+        0.611111111111111,
+        0.9444444444444445
+      ],
+      "tau_boot_vs_boot_mean": 0.7551322125667793,
+      "split_half_tau_mean": 0.6264734176159986,
+      "split_half_pearson_mean": 0.9725792607732047,
+      "spearman_brown_reliability": 0.9860990431299338,
+      "score_range_pp": 10.038162226878178,
+      "median_se_pp": 0.5471816840802628,
+      "adjacent_gap_over_se": [
+        0.08,
+        6.31,
+        1.19,
+        0.56,
+        0.0,
+        0.17,
+        0.36,
+        3.97
+      ],
+      "n_adjacent_pairs_gt_2se": 2,
+      "n_pairs_stable_95": 24,
+      "n_pairs": 36
+    }
+  },
+  "cross_dimension": {
+    "recognition__perception_detail": {
+      "tau_full": -0.05555555555555555,
+      "tau_boot_mean": -0.058223109485077314,
+      "tau_boot_ci95": [
+        -0.16666666666666666,
+        0.05555555555555555
+      ],
+      "pearson_full": -0.016429154519699174,
+      "pearson_boot_ci95": [
+        -0.10190034857965372,
+        0.0734243920695677
+      ],
+      "pearson_disattenuated": -0.01655059971516899,
+      "reliabilities_used": [
+        0.9946204520423851,
+        0.9907077787402276
+      ]
+    },
+    "recognition__safety_reasoning": {
+      "tau_full": -0.1111111111111111,
+      "tau_boot_mean": -0.20419759997947604,
+      "tau_boot_ci95": [
+        -0.3333333333333333,
+        -0.05555555555555555
+      ],
+      "pearson_full": 0.03063852270289602,
+      "pearson_boot_ci95": [
+        -0.07953158371679712,
+        0.13651203689423674
+      ],
+      "pearson_disattenuated": 0.03095262079429924,
+      "reliabilities_used": [
+        0.9946204520423851,
+        0.9851069945355669
+      ]
+    },
+    "perception_detail__safety_reasoning": {
+      "tau_full": 0.05555555555555555,
+      "tau_boot_mean": 0.06907018924190364,
+      "tau_boot_ci95": [
+        -0.08451542547285165,
+        0.2222222222222222
+      ],
+      "pearson_full": -0.3398224331594398,
+      "pearson_boot_ci95": [
+        -0.442177264818672,
+        -0.20974721648094793
+      ],
+      "pearson_disattenuated": -0.34398345741861974,
+      "reliabilities_used": [
+        0.9907077787402276,
+        0.9851069945355669
+      ]
+    }
+  },
+  "reversals": {
+    "n_orderings": 108,
+    "observed_swaps": 56,
+    "expected_under_independence": 54.0,
+    "stable_swaps_95": 48,
+    "stable_swaps_80": 51,
+    "boot_swaps_mean": 57.3915,
+    "boot_swaps_ci95": [
+      54.0,
+      62.0
+    ],
+    "details": [
+      {
+        "pair": [
+          "claude_opus",
+          "gemini25_flash"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          7.93,
+          3.93
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "gemini25_pro"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          16.34,
+          2.6
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "gpt4o"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          2.94,
+          6.47
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "gpt54"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          13.17,
+          5.38
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "gpt4o"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          10.87,
+          10.4
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemini25_pro",
+          "gpt4o"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          19.29,
+          9.06
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "gpt54"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          15.11,
+          3.17
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gpt4o",
+          "gpt54"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          16.11,
+          11.84
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gpt4o",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          7.59,
+          8.6
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gpt54",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          8.52,
+          3.24
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "gpt54"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          13.17,
+          8.65
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "gpt54"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          5.23,
+          4.97
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          13.03,
+          5.78
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemini25_pro",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          21.44,
+          5.59
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "gpt54"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          15.11,
+          8.02
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gpt54",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          8.52,
+          4.86
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gpt54",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          18.26,
+          10.74
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "llama4_maverick",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          4.27,
+          20.16
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "nemotron_12b",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          9.74,
+          5.89
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "gpt4o"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          6.47,
+          15.49
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "gpt4o"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          10.4,
+          11.81
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          8.12,
+          5.78
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemini25_pro",
+          "gpt4o"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          9.06,
+          11.99
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemini25_pro",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          9.46,
+          5.59
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "gpt4o"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          8.67,
+          14.86
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gpt4o",
+          "gpt54"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          11.84,
+          6.84
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gpt4o",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          8.6,
+          11.7
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gpt4o",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          18.52,
+          17.59
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "gpt54",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          6.68,
+          10.74
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "llama4_maverick",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          5.82,
+          20.16
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "nemotron_12b",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          9.92,
+          5.89
+        ],
+        "frac_resamples_swapped": 1.0
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "gemini25_pro"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          16.34,
+          3.5
+        ],
+        "frac_resamples_swapped": 0.999
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "gemma4_31b"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          9.88,
+          1.73
+        ],
+        "frac_resamples_swapped": 0.998
+      },
+      {
+        "pair": [
+          "gpt4o",
+          "llama4_maverick"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          2.12,
+          12.7
+        ],
+        "frac_resamples_swapped": 0.998
+      },
+      {
+        "pair": [
+          "gpt4o",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          2.16,
+          17.59
+        ],
+        "frac_resamples_swapped": 0.998
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "gemini25_flash"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          7.93,
+          3.68
+        ],
+        "frac_resamples_swapped": 0.997
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          4.64,
+          3.79
+        ],
+        "frac_resamples_swapped": 0.997
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          4.64,
+          2.13
+        ],
+        "frac_resamples_swapped": 0.994
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          6.59,
+          3.16
+        ],
+        "frac_resamples_swapped": 0.99
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          3.15,
+          2.72
+        ],
+        "frac_resamples_swapped": 0.99
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          9.85,
+          2.72
+        ],
+        "frac_resamples_swapped": 0.99
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "gpt54"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          5.23,
+          1.44
+        ],
+        "frac_resamples_swapped": 0.988
+      },
+      {
+        "pair": [
+          "gemini25_pro",
+          "gemma4_31b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          18.29,
+          2.87
+        ],
+        "frac_resamples_swapped": 0.988
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          3.29,
+          1.8
+        ],
+        "frac_resamples_swapped": 0.986
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "gemma4_31b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          9.88,
+          3.05
+        ],
+        "frac_resamples_swapped": 0.984
+      },
+      {
+        "pair": [
+          "gpt4o",
+          "llama4_maverick"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          2.12,
+          2.58
+        ],
+        "frac_resamples_swapped": 0.983
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          5.1,
+          2.1
+        ],
+        "frac_resamples_swapped": 0.978
+      },
+      {
+        "pair": [
+          "claude_opus",
+          "qwen35_122b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          12.06,
+          2.1
+        ],
+        "frac_resamples_swapped": 0.978
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "llama4_maverick"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          1.12,
+          4.03
+        ],
+        "frac_resamples_swapped": 0.909
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "llama4_maverick"
+        ],
+        "dims": [
+          "recognition",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          1.12,
+          17.44
+        ],
+        "frac_resamples_swapped": 0.909
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "gpt4o"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          1.0,
+          8.67
+        ],
+        "frac_resamples_swapped": 0.905
+      },
+      {
+        "pair": [
+          "gemini25_pro",
+          "gemma4_31b"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          18.29,
+          0.39
+        ],
+        "frac_resamples_swapped": 0.733
+      },
+      {
+        "pair": [
+          "gemini25_pro",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "recognition",
+          "perception_detail"
+        ],
+        "gap_pp": [
+          11.7,
+          0.46
+        ],
+        "frac_resamples_swapped": 0.714
+      },
+      {
+        "pair": [
+          "gemini25_flash",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          1.8,
+          0.11
+        ],
+        "frac_resamples_swapped": 0.538
+      },
+      {
+        "pair": [
+          "gemma4_31b",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          0.07,
+          3.16
+        ],
+        "frac_resamples_swapped": 0.532
+      },
+      {
+        "pair": [
+          "gemini25_pro",
+          "nemotron_12b"
+        ],
+        "dims": [
+          "perception_detail",
+          "safety_reasoning"
+        ],
+        "gap_pp": [
+          0.46,
+          0.29
+        ],
+        "frac_resamples_swapped": 0.474
+      }
+    ],
+    "permutation_null_mean": 54.0585,
+    "permutation_null_ci95": [
+      37.0,
+      70.0
+    ]
+  }
+}

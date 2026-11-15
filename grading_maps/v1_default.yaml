@@ -1,0 +1,28 @@
+# D23 ordinal grading map — v1 (default)
+# Maps each field family's raw pred-vs-GT comparison to a 4-level ordered category.
+# Codes: 3=correct, 2=partial, 1=wrong, 0=abstain.
+# The response matrix ALWAYS stores abstain (0) distinctly; how the IRT likelihood
+# treats abstain is a separate fit-time flag, never a rebuild.
+version: v1_default
+categories: {correct: 3, partial: 2, wrong: 1, abstain: 0}
+
+families:
+  action:            # per-person action_code (L2) and dominant_actions[0] (L1)
+    n_categories: 4
+    rule: taxonomic  # exact->correct, same-group(0.33)->partial, else wrong; empty/missing->abstain
+  scene_type:        # scene-level recognition (SA/MAI/MAC)
+    n_categories: 3  # correct / wrong / abstain (no natural partial)
+    rule: exact
+  ppe:               # per-person 5 slots: helmet, high_vis_vest, welding_protection, harness, safety_shoes
+    n_categories: 3  # correct / wrong / abstain (binary slot has no partial in v1)
+    rule: ppe        # exact worn/not_worn match->correct; mismatch->wrong; pred cannot_determine->abstain
+    # GT not_applicable or cannot_determine on a slot -> emit NO row (no elicitable information)
+  count:             # num_workers
+    n_categories: 4
+    rule: count      # |delta|==0->correct, ==1->partial, >=2->wrong; pred None/missing->abstain
+  safety:            # per-person unsafe_act (L2) / scene_unsafe_act (L1), reduced to violation-present binary
+    n_categories: 3  # correct(agree) / wrong(disagree) / abstain
+    rule: safety_binary  # TN or both-present->correct; miss or false-alarm->wrong; pred missing/unparsed->abstain
+
+# Whole-(model,clip) failure: record success==False or unparseable -> ALL fields for that cell -> abstain.
+whole_clip_failure: abstain

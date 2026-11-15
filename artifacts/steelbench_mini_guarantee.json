@@ -1,0 +1,397 @@
+{
+  "artifact": "SteelBench-mini",
+  "n_clips": 200,
+  "n_items_covered": 2680,
+  "selection": "Fisher-information greedy under per-stratum floor quotas (visibility x layer x freq-band, min 3/stratum)",
+  "response_model": "m3",
+  "matrix_version": "v1",
+  "grading_map": "v1_default (sha in grading_maps/)",
+  "dev_subset": {
+    "n_clips": 194,
+    "disjoint_from_mini": true,
+    "sanity_dev_vs_full": {
+      "claude_opus": {
+        "full_score": 0.5043,
+        "dev_recon": 0.4882,
+        "abs_err_pp": 1.61
+      },
+      "gemini25_flash": {
+        "full_score": 0.507,
+        "dev_recon": 0.5028,
+        "abs_err_pp": 0.42
+      },
+      "gemini25_pro": {
+        "full_score": 0.4745,
+        "dev_recon": 0.4749,
+        "abs_err_pp": 0.04
+      },
+      "gemma4_31b": {
+        "full_score": 0.5223,
+        "dev_recon": 0.5411,
+        "abs_err_pp": 1.88
+      },
+      "gpt4o": {
+        "full_score": 0.5128,
+        "dev_recon": 0.4994,
+        "abs_err_pp": 1.34
+      },
+      "gpt54": {
+        "full_score": 0.5083,
+        "dev_recon": 0.5055,
+        "abs_err_pp": 0.28
+      },
+      "llama4_maverick": {
+        "full_score": 0.5742,
+        "dev_recon": 0.5723,
+        "abs_err_pp": 0.19
+      },
+      "nemotron_12b": {
+        "full_score": 0.5084,
+        "dev_recon": 0.5113,
+        "abs_err_pp": 0.29
+      },
+      "qwen35_122b": {
+        "full_score": 0.5749,
+        "dev_recon": 0.5455,
+        "abs_err_pp": 2.94
+      }
+    },
+    "sanity_mae_pp": 1.0
+  },
+  "version": "camera-ready (CODS 2026); clip list unchanged from submission",
+  "held_out_protocol": "LOMO: M3 refit on 8 primary models + their pseudo-respondents in every rotation (median init, lr decay; 9/9 converged), selection rerun, affine calibration fitted on the 8 training models. Headline estimator: blend 0.7*calibrated + 0.3*subset mean.",
+  "held_out_fidelity_LOMO_M3": {
+    "100": {
+      "blend_mae_pp": 1.5,
+      "blend_mae_ci95_pp": [
+        0.88,
+        2.12
+      ],
+      "blend_tau": 0.83,
+      "blend_tau_ci95": [
+        0.562,
+        1.0
+      ],
+      "interior_mae_pp": 1.47,
+      "top_model_err_pp": 2.82,
+      "naive_mae_pp": 3.06,
+      "subscores": {
+        "recognition": {
+          "calibrated_mae_pp": 3.0,
+          "naive_ranking_tau": 1.0
+        },
+        "perception_detail": {
+          "calibrated_mae_pp": 3.1,
+          "naive_ranking_tau": 1.0
+        },
+        "safety_reasoning": {
+          "calibrated_mae_pp": 2.6,
+          "naive_ranking_tau": 0.94
+        }
+      }
+    },
+    "150": {
+      "blend_mae_pp": 1.42,
+      "blend_mae_ci95_pp": [
+        0.93,
+        1.9
+      ],
+      "blend_tau": 0.89,
+      "blend_tau_ci95": [
+        0.613,
+        1.0
+      ],
+      "interior_mae_pp": 1.33,
+      "top_model_err_pp": 2.76,
+      "naive_mae_pp": 2.8,
+      "subscores": {
+        "recognition": {
+          "calibrated_mae_pp": 2.9,
+          "naive_ranking_tau": 1.0
+        },
+        "perception_detail": {
+          "calibrated_mae_pp": 3.0,
+          "naive_ranking_tau": 0.94
+        },
+        "safety_reasoning": {
+          "calibrated_mae_pp": 2.7,
+          "naive_ranking_tau": 1.0
+        }
+      }
+    },
+    "200": {
+      "blend_mae_pp": 1.21,
+      "blend_mae_ci95_pp": [
+        0.77,
+        1.72
+      ],
+      "blend_tau": 0.89,
+      "blend_tau_ci95": [
+        0.613,
+        1.0
+      ],
+      "interior_mae_pp": 1.06,
+      "top_model_err_pp": 2.82,
+      "naive_mae_pp": 2.2,
+      "subscores": {
+        "recognition": {
+          "calibrated_mae_pp": 3.1,
+          "naive_ranking_tau": 0.94
+        },
+        "perception_detail": {
+          "calibrated_mae_pp": 3.1,
+          "naive_ranking_tau": 0.94
+        },
+        "safety_reasoning": {
+          "calibrated_mae_pp": 2.5,
+          "naive_ranking_tau": 1.0
+        }
+      }
+    },
+    "300": {
+      "blend_mae_pp": 1.1,
+      "blend_mae_ci95_pp": [
+        0.64,
+        1.58
+      ],
+      "blend_tau": 0.94,
+      "blend_tau_ci95": [
+        0.724,
+        1.0
+      ],
+      "interior_mae_pp": 1.0,
+      "top_model_err_pp": 2.41,
+      "naive_mae_pp": 1.63,
+      "subscores": {
+        "recognition": {
+          "calibrated_mae_pp": 3.1,
+          "naive_ranking_tau": 0.94
+        },
+        "perception_detail": {
+          "calibrated_mae_pp": 3.0,
+          "naive_ranking_tau": 0.94
+        },
+        "safety_reasoning": {
+          "calibrated_mae_pp": 2.6,
+          "naive_ranking_tau": 0.94
+        }
+      }
+    }
+  },
+  "fixed_subset_heldout_M3": {
+    "note": "This exact clip list; item parameters and calibration exclude the held-out model, only the selection saw it.",
+    "blend_mae_pp": 1.34,
+    "blend_mae_ci95_pp": [
+      0.8,
+      1.99
+    ],
+    "blend_tau": 0.94,
+    "subscores": {
+      "recognition": {
+        "naive_mae_pp": 4.4,
+        "naive_tau": 0.94,
+        "calibrated_mae_pp": 2.9
+      },
+      "perception_detail": {
+        "naive_mae_pp": 3.4,
+        "naive_tau": 0.89,
+        "calibrated_mae_pp": 3.1
+      },
+      "safety_reasoning": {
+        "naive_mae_pp": 12.9,
+        "naive_tau": 1.0,
+        "calibrated_mae_pp": 1.9
+      }
+    },
+    "in_sample_safety_bias": {
+      "naive_mae_pp": 12.9,
+      "calibrated_mae_pp": 1.7
+    }
+  },
+  "validity_range": {
+    "calibrated_score_ranges": {
+      "aggregate": [
+        0.475,
+        0.575
+      ],
+      "recognition": [
+        0.355,
+        0.57
+      ],
+      "perception_detail": [
+        0.476,
+        0.661
+      ],
+      "safety_reasoning": [
+        0.374,
+        0.575
+      ]
+    },
+    "inside_range_blend_mae_pp": 1.06,
+    "inside_range_blend_max_pp": 1.92,
+    "edge_rotation_blend_mae_pp": 1.7,
+    "subscore_calibrated_mae_pp_inside_vs_outside": {
+      "recognition": [
+        2.6,
+        4.9
+      ],
+      "perception_detail": [
+        1.8,
+        7.5
+      ],
+      "safety_reasoning": [
+        1.9,
+        4.7
+      ]
+    }
+  },
+  "per_stratum_mae_bound_pp": {
+    "k3_released": 17.6,
+    "k5_alternative": 10.9
+  },
+  "held_out_baselines_LOMO_M3_n200": {
+    "fisher_stratified": {
+      "subset_mean": {
+        "mae_pp": 2.2,
+        "mae_ci95_pp": [
+          1.09,
+          3.47
+        ],
+        "tau": 0.67
+      },
+      "gp_cal": {
+        "mae_pp": 1.21,
+        "mae_ci95_pp": [
+          0.77,
+          1.72
+        ],
+        "tau": 0.89
+      }
+    },
+    "fisher_unconstrained": {
+      "subset_mean": {
+        "mae_pp": 1.42,
+        "mae_ci95_pp": [
+          0.85,
+          2.08
+        ],
+        "tau": 0.56
+      },
+      "gp_cal": {
+        "mae_pp": 1.05,
+        "mae_ci95_pp": [
+          0.56,
+          1.57
+        ],
+        "tau": 0.89
+      }
+    },
+    "stratified_random": {
+      "subset_mean": {
+        "mae_pp": 1.05,
+        "mae_ci95_pp": [
+          0.97,
+          1.12
+        ],
+        "tau": 0.68
+      },
+      "gp_cal": {
+        "mae_pp": 1.23,
+        "mae_ci95_pp": [
+          0.89,
+          1.61
+        ],
+        "tau": 0.76
+      }
+    },
+    "random": {
+      "subset_mean": {
+        "mae_pp": 1.07,
+        "mae_ci95_pp": [
+          0.89,
+          1.24
+        ],
+        "tau": 0.7
+      },
+      "gp_cal": {
+        "mae_pp": 1.07,
+        "mae_ci95_pp": [
+          0.68,
+          1.53
+        ],
+        "tau": 0.75
+      }
+    },
+    "kmedoids": {
+      "subset_mean": {
+        "mae_pp": 1.01,
+        "mae_ci95_pp": [
+          0.75,
+          1.3
+        ],
+        "tau": 0.71
+      },
+      "gp_cal": {
+        "mae_pp": 0.97,
+        "mae_ci95_pp": [
+          0.68,
+          1.35
+        ],
+        "tau": 0.84
+      }
+    },
+    "disagree_stratified": {
+      "subset_mean": {
+        "mae_pp": 1.19,
+        "mae_ci95_pp": [
+          0.77,
+          1.59
+        ],
+        "tau": 0.67
+      },
+      "gp_cal": {
+        "mae_pp": 1.37,
+        "mae_ci95_pp": [
+          0.73,
+          2.15
+        ],
+        "tau": 0.78
+      }
+    }
+  },
+  "subscore_ranking_reliability_full_benchmark": {
+    "recognition": {
+      "tau_boot_vs_full": 0.98,
+      "split_half_tau": 0.96,
+      "stable_pairs_95_of_36": 33
+    },
+    "perception_detail": {
+      "tau_boot_vs_full": 0.93,
+      "split_half_tau": 0.87,
+      "stable_pairs_95_of_36": 32
+    },
+    "safety_reasoning": {
+      "tau_boot_vs_full": 0.91,
+      "split_half_tau": 0.81,
+      "stable_pairs_95_of_36": 32
+    },
+    "aggregate": {
+      "tau_boot_vs_full": 0.81,
+      "split_half_tau": 0.63,
+      "stable_pairs_95_of_36": 24
+    }
+  },
+  "validity_conditions": [
+    "Validated for models whose aggregate and capability scores fall inside the calibrated ranges of the nine-model pool (validity_range.calibrated_score_ranges). Outside them the estimate is an extrapolation: held-out error roughly doubles to quadruples per dimension; confirm on the full benchmark.",
+    "Item parameters assume the v1 ordinal grading map; any change to the grading map requires revalidation.",
+    "Pseudo-respondents stabilise item parameters but are variants of the nine models, not independent ability points.",
+    "The subset is not a substitute for full evaluation when a new capability dimension is introduced."
+  ],
+  "usage": [
+    "Designed for RANKING models and recovering CAPABILITY PROFILES.",
+    "Score levels: use the calibrated estimator (aggregate: blend; capability: calibrated per-dimension); the naive subset mean is biased on this subset (safety naive MAE ~13 pp).",
+    "Capability rankings: use the naive per-dimension subset means.",
+    "If only aggregate score LEVELS are needed, a uniform random subset of equal size is at least as accurate."
+  ],
+  "responsible_use": "Report subset-based scores as estimates with the LOMO interval, disclose the subset version and size, and state whether the model lies inside the validated range."
+}

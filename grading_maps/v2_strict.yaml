@@ -1,0 +1,24 @@
+# D23 ordinal grading map — v2 (strict) — spec §14 sensitivity rerun.
+# Same schema as v1 but harsher: no partial credit anywhere, cannot_determine counts as wrong.
+# Run with:  build_response_matrix.py --grading-map v2_strict
+version: v2_strict
+categories: {correct: 3, partial: 2, wrong: 1, abstain: 0}
+
+families:
+  action:
+    n_categories: 3      # only exact match counts; same-group -> wrong
+    rule: exact_strict   # exact->correct, else wrong; empty/missing->abstain
+  scene_type:
+    n_categories: 3
+    rule: exact
+  ppe:
+    n_categories: 2      # correct / wrong only
+    rule: ppe_strict     # exact match->correct; anything else (incl pred cannot_determine)->wrong
+  count:
+    n_categories: 3      # exact only; +/-1 -> wrong
+    rule: count_strict   # delta==0->correct, else wrong; pred None/missing->abstain
+  safety:
+    n_categories: 3
+    rule: safety_binary
+
+whole_clip_failure: abstain

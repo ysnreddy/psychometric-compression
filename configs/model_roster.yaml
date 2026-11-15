@@ -1,0 +1,38 @@
+# Respondent roster for the D23 response matrix.
+# `base` = the 9 real evaluated models (independent ability points; the leaderboard).
+# `pseudo` = existing perturbation dumps promoted into the MAIN analysis to stabilize
+#            item parameters (small-pool fix). Correlated with their base model — the IRT
+#            model carries a per-base-model group effect so this is modeled, not hidden.
+# All paths are relative to the SteelBench repo root. NO new inference — every file exists.
+
+repo_root: /path/to/benchmark/repo  # set to your benchmark checkout; not needed when using the shipped data/ matrix
+results_dir: eval_data/results
+
+base:
+  - {id: gpt4o,            file: gpt4o.jsonl,            base_model: gpt4o}
+  - {id: gpt54,            file: gpt54.jsonl,            base_model: gpt54}
+  - {id: claude_opus,      file: claude_opus.jsonl,      base_model: claude_opus}
+  - {id: gemini25_pro,     file: gemini25_pro.jsonl,     base_model: gemini25_pro}
+  - {id: gemini25_flash,   file: gemini25_flash.jsonl,   base_model: gemini25_flash}
+  - {id: qwen35_122b,      file: qwen35_122b.jsonl,      base_model: qwen35_122b}
+  - {id: llama4_maverick,  file: llama4_maverick.jsonl,  base_model: llama4_maverick}
+  - {id: gemma4_31b,       file: gemma4_31b.jsonl,       base_model: gemma4_31b}
+  - {id: nemotron_12b,     file: nemotron_12b.jsonl,     base_model: nemotron_12b}
+
+# Pseudo-respondents (existing dumps). Near-full-pool coverage (~1318 clips) unless noted.
+pseudo:
+  - {id: gemma4_31b__promptv3,   file: prompt_sensitivity/gemma4_31b_v3_full.jsonl,   base_model: gemma4_31b}
+  - {id: llama4_maverick__promptv3, file: prompt_sensitivity/llama4_maverick_v3_full.jsonl, base_model: llama4_maverick}
+  - {id: qwen35_122b__promptv3,  file: prompt_sensitivity/qwen35_122b_v3_full.jsonl,  base_model: qwen35_122b}
+  # Partial-coverage (~150 clips) frame-density perturbations — item estimation on covered clips only.
+  - {id: gpt4o__1f,   file: frame_density/gpt4o_1f.jsonl,   base_model: gpt4o}
+  - {id: gpt4o__2f,   file: frame_density/gpt4o_2f.jsonl,   base_model: gpt4o}
+  - {id: gpt4o__4f,   file: frame_density/gpt4o_4f.jsonl,   base_model: gpt4o}
+  - {id: gpt4o__15f,  file: frame_density/gpt4o_15f.jsonl,  base_model: gpt4o}
+  - {id: gemma4_31b__1f,  file: frame_density/gemma4_31b_1f.jsonl,  base_model: gemma4_31b}
+  - {id: gemma4_31b__2f,  file: frame_density/gemma4_31b_2f.jsonl,  base_model: gemma4_31b}
+  - {id: gemma4_31b__4f,  file: frame_density/gemma4_31b_4f.jsonl,  base_model: gemma4_31b}
+  - {id: gemma4_31b__15f, file: frame_density/gemma4_31b_15f.jsonl, base_model: gemma4_31b}
+
+# Files present in results/ that are NOT respondents (guard against globbing them in):
+exclude: [claude_sonnet.jsonl, gpt4o_batch_v2.jsonl, gpt54_batch_v2.jsonl]

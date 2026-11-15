@@ -1,0 +1,164 @@
+{
+  "steps": 8000,
+  "seeds": 3,
+  "n_subset": 200,
+  "reference_M3": {
+    "elpd_waic": -91266.60063106424,
+    "omega": [
+      [
+        1.0,
+        -0.4690000116825104,
+        -0.7929999828338623
+      ],
+      [
+        -0.4690000116825104,
+        1.0,
+        0.012000000104308128
+      ],
+      [
+        -0.7929999828338623,
+        0.012000000104308128,
+        1.0
+      ]
+    ],
+    "theta_vs_subscore_tau": {
+      "recognition": 0.816982446237566,
+      "perception_detail": 0.5512459105263765,
+      "safety_reasoning": 0.9718253158075499
+    }
+  },
+  "a_nested_pseudo": {
+    "elpd_waic": -91294.67688113154,
+    "elpd_diff_vs_independent": 28.1,
+    "compare": {
+      "best": "M3_independent",
+      "models": {
+        "M3_independent": {
+          "elpd_waic": -91266.6,
+          "elpd_diff": 0.0,
+          "dse": 0.0
+        },
+        "M3_nested": {
+          "elpd_waic": -91294.7,
+          "elpd_diff": 28.1,
+          "dse": 21.1
+        }
+      }
+    },
+    "sigma_resp_posterior_mean": 0.2476484626531601,
+    "item_param_corr_vs_independent": {
+      "a": 0.9940268993377686,
+      "b": 0.99709552526474,
+      "k0": 0.9785339832305908,
+      "k1": 0.9767125844955444
+    },
+    "discrimination_ratio_nested_over_independent_by_family": {
+      "action": 1.0162527561187744,
+      "count": 0.9892697930335999,
+      "ppe": 0.9820691347122192,
+      "safety": 1.022876262664795,
+      "scene_type": 0.9903699159622192
+    },
+    "omega": [
+      [
+        1.0,
+        -0.2160000056028366,
+        0.9010000228881836
+      ],
+      [
+        -0.2160000056028366,
+        1.0,
+        -0.13300000131130219
+      ],
+      [
+        0.9010000228881836,
+        -0.13300000131130219,
+        1.0
+      ]
+    ],
+    "theta_vs_subscore_tau": {
+      "recognition": 0.816982446237566,
+      "perception_detail": 0.5512459105263765,
+      "safety_reasoning": 0.9718253158075499
+    },
+    "leaderboard_tau_vs_independent": {
+      "recognition": 1.0,
+      "perception_detail": 1.0,
+      "safety_reasoning": 0.9999999999999999
+    },
+    "downstream_n": {
+      "gp_cal_mae": 0.014094136492668151,
+      "gp_cal_tau": 0.9444444444444445,
+      "subscore_tau_naive": {
+        "recognition": 0.9444444444444445,
+        "perception_detail": 0.8888888888888888,
+        "safety_reasoning": 1.0
+      },
+      "clip_overlap_with_reference_selection": 190
+    },
+    "fit_seconds": 420.5
+  },
+  "b_cross_loadings": {
+    "elpd_waic": -90224.64566049266,
+    "compare": {
+      "best": "M3x",
+      "models": {
+        "M3": {
+          "elpd_waic": -91266.6,
+          "elpd_diff": 1042.0,
+          "dse": 97.5
+        },
+        "M3x": {
+          "elpd_waic": -90224.6,
+          "elpd_diff": 0.0,
+          "dse": 0.0
+        }
+      }
+    },
+    "secondary_loading_over_primary_median_by_family": {
+      "count": 1.2617138624191284,
+      "ppe": 1.1910368204116821,
+      "safety": 0.8964554071426392
+    },
+    "secondary_loading_median_by_family": {
+      "count": 0.278668612241745,
+      "ppe": 2.4967997074127197,
+      "safety": 2.121107578277588
+    },
+    "primary_loading_median_by_family": {
+      "action": 0.05330890417098999,
+      "count": 0.22082309424877167,
+      "ppe": 2.096269130706787,
+      "safety": 2.366683006286621,
+      "scene_type": 0.05201470106840134
+    },
+    "omega": [
+      [
+        1.0,
+        -0.7609999775886536,
+        -0.3709999918937683
+      ],
+      [
+        -0.7609999775886536,
+        1.0,
+        0.7519999742507935
+      ],
+      [
+        -0.3709999918937683,
+        0.7519999742507935,
+        1.0
+      ]
+    ],
+    "theta_vs_subscore_tau": {
+      "recognition": -0.02817180849095055,
+      "perception_detail": 0.17149858514250882,
+      "safety_reasoning": 0.8994012224377722
+    },
+    "leaderboard_tau_vs_M3": {
+      "recognition": 0.0,
+      "perception_detail": -0.32839478871459266,
+      "safety_reasoning": 0.8657680793384716
+    },
+    "fit_seconds": 434.0
+  }
+}

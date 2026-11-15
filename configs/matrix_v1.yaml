@@ -1,0 +1,33 @@
+# D23 response-matrix build config — v1.
+matrix_version: v1
+roster: configs/model_roster.yaml
+grading_map: grading_maps/v1_default.yaml
+
+# GT source: canonical priority-resolved release GT (expert_1 > expert_2 > annotator_* > safety_officer),
+# 1972 clips. The pool is the intersection of this GT with the base-model coverage.
+gt_dir: steelbench_release/data/annotations
+manifest: steelbench_release/manifests/batch_manifest.csv   # for `site` join only
+
+# Pool selection:
+#   intersection  -> clips where ALL base models have a success record (default; = 1345)
+#   <path.json>   -> explicit clip-id list (e.g. eval_data/gt_clips.json for a later extension)
+pool: intersection
+
+# Which respondents to include in this build.
+include_pseudo: true
+
+# Field families to emit (see grading map).
+families: [action, scene_type, ppe, count, safety]
+
+# Frequency-band derivation (head/mid/tail) from GT action-code mass over the pool.
+freq_bands:
+  head_mass_cutoff: 0.50   # codes covering the top 50% of instance mass -> head
+  tail_share_cutoff: 0.01  # codes with < 1% of instances -> tail; between -> mid
+  out: data/action_freq_bands_v1.json
+
+outputs:
+  matrix_parquet: data/response_matrix_v1.parquet
+  matrix_csv: data/response_matrix_v1.csv.gz
+  clip_strata: data/clip_strata_v1.csv
+  field_catalog: data/field_catalog_v1.csv
+  qc_report_json: data/qc_report_v1.json

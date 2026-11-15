@@ -1,0 +1,183 @@
+{
+  "matrix": "data/response_matrix_v1.parquet",
+  "abstain": "merge",
+  "dim": 3,
+  "steps": 4000,
+  "seeds": 3,
+  "use_group": false,
+  "n_field_obs": 170162,
+  "n_items": 13364,
+  "n_resp": 20,
+  "n_base_models": 9,
+  "families": [
+    "action",
+    "count",
+    "ppe",
+    "safety",
+    "scene_type"
+  ],
+  "resp_names": [
+    "claude_opus",
+    "gemini25_flash",
+    "gemini25_pro",
+    "gemma4_31b",
+    "gemma4_31b__15f",
+    "gemma4_31b__1f",
+    "gemma4_31b__2f",
+    "gemma4_31b__4f",
+    "gemma4_31b__promptv3",
+    "gpt4o",
+    "gpt4o__15f",
+    "gpt4o__1f",
+    "gpt4o__2f",
+    "gpt4o__4f",
+    "gpt54",
+    "llama4_maverick",
+    "llama4_maverick__promptv3",
+    "nemotron_12b",
+    "qwen35_122b",
+    "qwen35_122b__promptv3"
+  ],
+  "group_names": [
+    "claude_opus",
+    "gemini25_flash",
+    "gemini25_pro",
+    "gemma4_31b",
+    "gpt4o",
+    "gpt54",
+    "llama4_maverick",
+    "nemotron_12b",
+    "qwen35_122b"
+  ],
+  "models": {
+    "M1_field_2pl": {
+      "elpd_waic": -79604.14986017413,
+      "elpd_loo": -79604.14986017413,
+      "p_waic": 9194.625,
+      "se": 210.00727906613446,
+      "n_obs": 170162,
+      "pareto_k_bad_frac": 0.0122,
+      "final_elbo": 87798.3,
+      "fit_seconds": 32.0
+    },
+    "M2_graded": {
+      "elpd_waic": -95389.67848852319,
+      "elpd_loo": -95389.67848852319,
+      "p_waic": 11763.92578125,
+      "se": 242.74877056579754,
+      "n_obs": 170162,
+      "pareto_k_bad_frac": 0.0214,
+      "final_elbo": 109435.7,
+      "fit_seconds": 115.4
+    },
+    "M3_mirt": {
+      "elpd_waic": -91341.92268398558,
+      "elpd_loo": -91341.92268398558,
+      "p_waic": 13627.2041015625,
+      "se": 249.77225465478378,
+      "n_obs": 170162,
+      "pareto_k_bad_frac": 0.0326,
+      "final_elbo": 106469.5,
+      "fit_seconds": 74.9
+    }
+  },
+  "M0": {
+    "thresholds": {
+      "0.5": {
+        "clip_pass_rate": 0.6235,
+        "final_elbo": 9871.7,
+        "seconds": 9.5
+      },
+      "0.6": {
+        "clip_pass_rate": 0.3701,
+        "final_elbo": 9891.0,
+        "seconds": 6.3
+      },
+      "0.7": {
+        "clip_pass_rate": 0.2222,
+        "final_elbo": 8029.9,
+        "seconds": 6.2
+      }
+    },
+    "headline_threshold": 0.5
+  },
+  "M2_vs_M3_compare": {
+    "elpd_diff_M3_minus_M2": 4047.8,
+    "best_by_waic": "M3_mirt",
+    "compare_table": {
+      "M2_graded": {
+        "elpd_waic": -95389.7,
+        "elpd_diff": 4047.8,
+        "dse": 87.5
+      },
+      "M3_mirt": {
+        "elpd_waic": -91341.9,
+        "elpd_diff": 0.0,
+        "dse": 0.0
+      }
+    }
+  },
+  "note_M1": "M1 LOO is on a BINARIZED response coding, not comparable to M2/M3 ordinal LOO; the C2 flat-vs-structured verdict is the downstream reconstruction curve in EA.2, not this number.",
+  "PPC_M2": {
+    "y_bin": {
+      "observed": [
+        0.4555,
+        0.5445
+      ],
+      "predicted": [
+        0.4558,
+        0.5442
+      ]
+    },
+    "y_tern": {
+      "observed": [
+        0.4488,
+        0.209,
+        0.3422
+      ],
+      "predicted": [
+        0.4949,
+        0.1154,
+        0.3897
+      ]
+    }
+  },
+  "PPC_M3": {
+    "y_bin": {
+      "observed": [
+        0.4555,
+        0.5445
+      ],
+      "predicted": [
+        0.4562,
+        0.5438
+      ]
+    },
+    "y_tern": {
+      "observed": [
+        0.4488,
+        0.209,
+        0.3422
+      ],
+      "predicted": [
+        0.4933,
+        0.1158,
+        0.391
+      ]
+    }
+  },
+  "M2_base_ability": {
+    "qwen35_122b": -1.4,
+    "gpt4o": -2.0,
+    "llama4_maverick": -2.1,
+    "gpt54": -2.7,
+    "claude_opus": -2.9,
+    "gemma4_31b": -3.0,
+    "gemini25_flash": -3.3,
+    "nemotron_12b": -3.8,
+    "gemini25_pro": -4.0
+  },
+  "ability_vs_truescore_corr": 0.803,
+  "total_seconds": 254.2,
+  "ability_note": "theta/ability entries in this file were computed pre-likelihood-fix; authoritative refined abilities live in results/fits/*.npz (re-derived) and EA.5/EA.2/C2 JSONs. PPC and WAIC entries here are valid (post-fix run)."
+}

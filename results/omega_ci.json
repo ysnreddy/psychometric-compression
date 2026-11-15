@@ -1,0 +1,163 @@
+{
+  "steps": 4000,
+  "seeds": 3,
+  "dims": [
+    "recognition",
+    "perception_detail",
+    "safety_reasoning"
+  ],
+  "conditions": {
+    "default_merge": {
+      "matrix": "data/response_matrix_v1.parquet",
+      "abstain": "merge",
+      "fit_seconds": 51.5,
+      "omega": {
+        "recognition__perception_detail": {
+          "mean": -0.469,
+          "ci95": [
+            -0.485,
+            -0.452
+          ],
+          "sd": 0.008
+        },
+        "recognition__safety_reasoning": {
+          "mean": -0.793,
+          "ci95": [
+            -0.8,
+            -0.785
+          ],
+          "sd": 0.004
+        },
+        "perception_detail__safety_reasoning": {
+          "mean": 0.012,
+          "ci95": [
+            -0.009,
+            0.031
+          ],
+          "sd": 0.011
+        }
+      }
+    },
+    "abstain_drop": {
+      "matrix": "data/response_matrix_v1.parquet",
+      "abstain": "drop",
+      "fit_seconds": 171.7,
+      "omega": {
+        "recognition__perception_detail": {
+          "mean": 0.24,
+          "ci95": [
+            0.156,
+            0.319
+          ],
+          "sd": 0.042
+        },
+        "recognition__safety_reasoning": {
+          "mean": -0.697,
+          "ci95": [
+            -0.703,
+            -0.69
+          ],
+          "sd": 0.003
+        },
+        "perception_detail__safety_reasoning": {
+          "mean": -0.148,
+          "ci95": [
+            -0.205,
+            -0.09
+          ],
+          "sd": 0.03
+        }
+      }
+    },
+    "strict_map": {
+      "matrix": "data/response_matrix_v1_v2_strict.parquet",
+      "abstain": "merge",
+      "fit_seconds": 73.8,
+      "omega": {
+        "recognition__perception_detail": {
+          "mean": -0.706,
+          "ci95": [
+            -0.716,
+            -0.695
+          ],
+          "sd": 0.005
+        },
+        "recognition__safety_reasoning": {
+          "mean": 0.92,
+          "ci95": [
+            0.918,
+            0.923
+          ],
+          "sd": 0.001
+        },
+        "perception_detail__safety_reasoning": {
+          "mean": -0.767,
+          "ci95": [
+            -0.781,
+            -0.752
+          ],
+          "sd": 0.007
+        }
+      }
+    }
+  },
+  "raw_subscores_default_map": {
+    "per_model_subscores": {
+      "claude_opus": [
+        0.5186,
+        0.5406,
+        0.3948
+      ],
+      "gemini25_flash": [
+        0.4393,
+        0.5799,
+        0.4316
+      ],
+      "gemini25_pro": [
+        0.3552,
+        0.5666,
+        0.4297
+      ],
+      "gemma4_31b": [
+        0.5381,
+        0.5626,
+        0.401
+      ],
+      "gpt4o": [
+        0.548,
+        0.4759,
+        0.5497
+      ],
+      "gpt54": [
+        0.3869,
+        0.5944,
+        0.4812
+      ],
+      "llama4_maverick": [
+        0.5268,
+        0.6029,
+        0.5754
+      ],
+      "nemotron_12b": [
+        0.4722,
+        0.5619,
+        0.4327
+      ],
+      "qwen35_122b": [
+        0.5696,
+        0.6612,
+        0.3738
+      ]
+    },
+    "pearson": {
+      "recognition__perception_detail": -0.016,
+      "recognition__safety_reasoning": 0.031,
+      "perception_detail__safety_reasoning": -0.34
+    },
+    "kendall_tau": {
+      "recognition__perception_detail": -0.056,
+      "recognition__safety_reasoning": -0.111,
+      "perception_detail__safety_reasoning": 0.056
+    }
+  }
+}

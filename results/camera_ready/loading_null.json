@@ -1,0 +1,358 @@
+{
+  "matrix": "data/response_matrix_v1.parquet",
+  "models": [
+    "claude_opus",
+    "gemini25_flash",
+    "gemini25_pro",
+    "gemma4_31b",
+    "gpt4o",
+    "gpt54",
+    "llama4_maverick",
+    "nemotron_12b",
+    "qwen35_122b"
+  ],
+  "families": [
+    "action",
+    "count",
+    "ppe",
+    "safety",
+    "scene_type"
+  ],
+  "paper_partition": [
+    "action+scene_type",
+    "count+ppe",
+    "safety"
+  ],
+  "paper_swaps": 56,
+  "total_pairs": 108,
+  "family_level": {
+    "scores": {
+      "claude_opus": {
+        "action": 0.43538291605301915,
+        "count": 0.5646840148698885,
+        "ppe": 0.5344399923678688,
+        "safety": 0.394775570272259,
+        "scene_type": 0.6867559523809523
+      },
+      "gemini25_flash": {
+        "action": 0.3956185567010309,
+        "count": 0.5126394052044609,
+        "ppe": 0.5972142720854798,
+        "safety": 0.4315673289183223,
+        "scene_type": 0.5275297619047619
+      },
+      "gemini25_pro": {
+        "action": 0.34572901325478644,
+        "count": 0.541635687732342,
+        "ppe": 0.5729822552947911,
+        "safety": 0.4297277409860191,
+        "scene_type": 0.3742559523809524
+      },
+      "gemma4_31b": {
+        "action": 0.42470544918998526,
+        "count": 0.5260223048327137,
+        "ppe": 0.5720282388857089,
+        "safety": 0.4010301692420898,
+        "scene_type": 0.7671130952380952
+      },
+      "gpt4o": {
+        "action": 0.43004418262150224,
+        "count": 0.5639405204460967,
+        "ppe": 0.45334859759587864,
+        "safety": 0.5496688741721855,
+        "scene_type": 0.7864583333333334
+      },
+      "gpt54": {
+        "action": 0.4223122238586156,
+        "count": 0.6204460966542751,
+        "ppe": 0.5876741079946575,
+        "safety": 0.48123620309050774,
+        "scene_type": 0.31547619047619047
+      },
+      "llama4_maverick": {
+        "action": 0.42488954344624447,
+        "count": 0.5286245353159851,
+        "ppe": 0.622018698721618,
+        "safety": 0.5754231052244297,
+        "scene_type": 0.7328869047619048
+      },
+      "nemotron_12b": {
+        "action": 0.3321060382916053,
+        "count": 0.48401486988847586,
+        "ppe": 0.5819500095401641,
+        "safety": 0.4326710816777042,
+        "scene_type": 0.7552083333333334
+      },
+      "qwen35_122b": {
+        "action": 0.46041973490427096,
+        "count": 0.5847583643122677,
+        "ppe": 0.6807861095210838,
+        "safety": 0.37380426784400295,
+        "scene_type": 0.7901785714285714
+      }
+    },
+    "kendall_tau_between_families": {
+      "action__count": 0.5555555555555556,
+      "action__ppe": 0.0,
+      "action__safety": -0.2222222222222222,
+      "action__scene_type": 0.3888888888888889,
+      "count__ppe": 0.0,
+      "count__safety": -0.2222222222222222,
+      "count__scene_type": -0.05555555555555555,
+      "ppe__safety": 0.1111111111111111,
+      "ppe__scene_type": -0.05555555555555555,
+      "safety__scene_type": -0.16666666666666666
+    },
+    "swaps": 174,
+    "total_pairs": 360
+  },
+  "partitions": {
+    "n": 25,
+    "paper_rank_by_swaps": 11,
+    "swaps_min": 46,
+    "swaps_median": 54.0,
+    "swaps_max": 62,
+    "rows": [
+      {
+        "blocks": [
+          "action+count",
+          "ppe+scene_type",
+          "safety"
+        ],
+        "swaps": 62,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+ppe",
+          "count+safety",
+          "scene_type"
+        ],
+        "swaps": 62,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+ppe+scene_type",
+          "count",
+          "safety"
+        ],
+        "swaps": 62,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+count+ppe",
+          "safety",
+          "scene_type"
+        ],
+        "swaps": 60,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action",
+          "count+safety",
+          "ppe+scene_type"
+        ],
+        "swaps": 60,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action",
+          "count+ppe+scene_type",
+          "safety"
+        ],
+        "swaps": 58,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+scene_type",
+          "count+safety",
+          "ppe"
+        ],
+        "swaps": 58,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+count+scene_type",
+          "ppe",
+          "safety"
+        ],
+        "swaps": 56,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+ppe+safety",
+          "count",
+          "scene_type"
+        ],
+        "swaps": 56,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+ppe",
+          "count",
+          "safety+scene_type"
+        ],
+        "swaps": 56,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+scene_type",
+          "count+ppe",
+          "safety"
+        ],
+        "swaps": 56,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+ppe",
+          "count+scene_type",
+          "safety"
+        ],
+        "swaps": 54,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+safety+scene_type",
+          "count",
+          "ppe"
+        ],
+        "swaps": 54,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+safety",
+          "count",
+          "ppe+scene_type"
+        ],
+        "swaps": 54,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+scene_type",
+          "count",
+          "ppe+safety"
+        ],
+        "swaps": 54,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+count+safety",
+          "ppe",
+          "scene_type"
+        ],
+        "swaps": 52,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+count",
+          "ppe+safety",
+          "scene_type"
+        ],
+        "swaps": 52,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+count",
+          "ppe",
+          "safety+scene_type"
+        ],
+        "swaps": 52,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+safety",
+          "count+ppe",
+          "scene_type"
+        ],
+        "swaps": 50,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action",
+          "count+ppe+safety",
+          "scene_type"
+        ],
+        "swaps": 50,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action",
+          "count+ppe",
+          "safety+scene_type"
+        ],
+        "swaps": 50,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action+safety",
+          "count+scene_type",
+          "ppe"
+        ],
+        "swaps": 48,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action",
+          "count+safety+scene_type",
+          "ppe"
+        ],
+        "swaps": 46,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action",
+          "count+scene_type",
+          "ppe+safety"
+        ],
+        "swaps": 46,
+        "total": 108
+      },
+      {
+        "blocks": [
+          "action",
+          "count",
+          "ppe+safety+scene_type"
+        ],
+        "swaps": 46,
+        "total": 108
+      }
+    ]
+  },
+  "item_permutation_null": {
+    "n_perm": 2000,
+    "mean": 17.773,
+    "q95": 24.0,
+    "max": 30,
+    "p_value_ge_paper": 0.0004997501249375312
+  },
+  "clip_bootstrap": {
+    "n_boot": 1000,
+    "mean": 57.382,
+    "ci95": [
+      54.0,
+      62.0
+    ]
+  }
+}

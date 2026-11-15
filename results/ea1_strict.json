@@ -1,0 +1,158 @@
+{
+  "matrix": "data/response_matrix_v1_v2_strict.parquet",
+  "abstain": "merge",
+  "dim": 3,
+  "steps": 4000,
+  "seeds": 2,
+  "use_group": false,
+  "n_field_obs": 170162,
+  "n_items": 13364,
+  "n_resp": 20,
+  "n_base_models": 9,
+  "families": [
+    "action",
+    "count",
+    "ppe",
+    "safety",
+    "scene_type"
+  ],
+  "resp_names": [
+    "claude_opus",
+    "gemini25_flash",
+    "gemini25_pro",
+    "gemma4_31b",
+    "gemma4_31b__15f",
+    "gemma4_31b__1f",
+    "gemma4_31b__2f",
+    "gemma4_31b__4f",
+    "gemma4_31b__promptv3",
+    "gpt4o",
+    "gpt4o__15f",
+    "gpt4o__1f",
+    "gpt4o__2f",
+    "gpt4o__4f",
+    "gpt54",
+    "llama4_maverick",
+    "llama4_maverick__promptv3",
+    "nemotron_12b",
+    "qwen35_122b",
+    "qwen35_122b__promptv3"
+  ],
+  "group_names": [
+    "claude_opus",
+    "gemini25_flash",
+    "gemini25_pro",
+    "gemma4_31b",
+    "gpt4o",
+    "gpt54",
+    "llama4_maverick",
+    "nemotron_12b",
+    "qwen35_122b"
+  ],
+  "models": {
+    "M1_field_2pl": {
+      "elpd_waic": -79604.14986017413,
+      "elpd_loo": -79604.14986017413,
+      "p_waic": 9194.625,
+      "se": 210.00727906613446,
+      "n_obs": 170162,
+      "pareto_k_bad_frac": 0.0122,
+      "final_elbo": 87798.3,
+      "fit_seconds": 21.4
+    },
+    "M2_graded": {
+      "elpd_waic": -78398.8502307809,
+      "elpd_loo": -78398.8502307809,
+      "p_waic": 10677.40625,
+      "se": 209.47786718631872,
+      "n_obs": 170162,
+      "pareto_k_bad_frac": 0.0202,
+      "final_elbo": 89564.6,
+      "fit_seconds": 27.0
+    },
+    "M3_mirt": {
+      "elpd_waic": -74523.41711950251,
+      "elpd_loo": -74523.41711950251,
+      "p_waic": 12797.966796875,
+      "se": 217.84025377670648,
+      "n_obs": 170162,
+      "pareto_k_bad_frac": 0.0329,
+      "final_elbo": 86817.0,
+      "fit_seconds": 34.9
+    }
+  },
+  "M0": {
+    "thresholds": {
+      "0.5": {
+        "clip_pass_rate": 0.5795,
+        "final_elbo": 10094.9,
+        "seconds": 6.8
+      },
+      "0.6": {
+        "clip_pass_rate": 0.2896,
+        "final_elbo": 8913.8,
+        "seconds": 4.3
+      },
+      "0.7": {
+        "clip_pass_rate": 0.2005,
+        "final_elbo": 7569.7,
+        "seconds": 4.0
+      }
+    },
+    "headline_threshold": 0.5
+  },
+  "M2_vs_M3_compare": {
+    "elpd_diff_M3_minus_M2": 3875.4,
+    "best_by_waic": "M3_mirt",
+    "compare_table": {
+      "M2_graded": {
+        "elpd_waic": -78398.9,
+        "elpd_diff": 3875.4,
+        "dse": 90.5
+      },
+      "M3_mirt": {
+        "elpd_waic": -74523.4,
+        "elpd_diff": 0.0,
+        "dse": 0.0
+      }
+    }
+  },
+  "note_M1": "M1 LOO is on a BINARIZED response coding, not comparable to M2/M3 ordinal LOO; the C2 flat-vs-structured verdict is the downstream reconstruction curve in EA.2, not this number.",
+  "PPC_M2": {
+    "y_bin": {
+      "observed": [
+        0.517,
+        0.483
+      ],
+      "predicted": [
+        0.5159,
+        0.4841
+      ]
+    }
+  },
+  "PPC_M3": {
+    "y_bin": {
+      "observed": [
+        0.517,
+        0.483
+      ],
+      "predicted": [
+        0.5179,
+        0.4821
+      ]
+    }
+  },
+  "M2_base_ability": {
+    "claude_opus": -6.0,
+    "gemini25_flash": -6.0,
+    "gemini25_pro": -6.0,
+    "gemma4_31b": -6.0,
+    "gpt4o": -6.0,
+    "gpt54": -6.0,
+    "llama4_maverick": -6.0,
+    "nemotron_12b": -6.0,
+    "qwen35_122b": -6.0
+  },
+  "ability_vs_truescore_corr": NaN,
+  "total_seconds": 106.3
+}

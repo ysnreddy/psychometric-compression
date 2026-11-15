@@ -1,0 +1,89 @@
+{
+  "matrix": "data/response_matrix_v1.parquet",
+  "fit": "results/fits/m3.npz",
+  "n": 150,
+  "min_k": 3,
+  "n_strata": 4,
+  "methods": {
+    "fisher_unconstrained": {
+      "aggregate_mae": 0.012074846884552915,
+      "aggregate_tau": 0.8333333333333334,
+      "n_items": 2792,
+      "strata_dropped_below_k": 0,
+      "strata_zero_coverage": 0,
+      "zero_cov_strata": [],
+      "per_stratum_mae_mean": 0.03011602225375171,
+      "per_stratum_mae_max": 0.0374551971326165,
+      "worst_strata": [
+        [
+          "contaminated",
+          0.0374551971326165
+        ],
+        [
+          "anchored",
+          0.03134067945095435
+        ],
+        [
+          "blind",
+          0.030190350862004278
+        ],
+        [
+          "none",
+          0.02147786156943173
+        ]
+      ],
+      "per_stratum_mae": {
+        "anchored": 0.0313,
+        "blind": 0.0302,
+        "contaminated": 0.0375,
+        "none": 0.0215
+      },
+      "coverage": {
+        "anchored": 11,
+        "blind": 8,
+        "contaminated": 3,
+        "none": 128
+      }
+    },
+    "fisher_stratified": {
+      "aggregate_mae": 0.011976552605250705,
+      "aggregate_tau": 0.7777777777777778,
+      "n_items": 2771,
+      "strata_dropped_below_k": 0,
+      "strata_zero_coverage": 0,
+      "zero_cov_strata": [],
+      "per_stratum_mae_mean": 0.028153181184500126,
+      "per_stratum_mae_max": 0.0374551971326165,
+      "worst_strata": [
+        [
+          "contaminated",
+          0.0374551971326165
+        ],
+        [
+          "blind",
+          0.030190350862004278
+        ],
+        [
+          "none",
+          0.02296896196956531
+        ],
+        [
+          "anchored",
+          0.021998214773814417
+        ]
+      ],
+      "per_stratum_mae": {
+        "anchored": 0.022,
+        "blind": 0.0302,
+        "contaminated": 0.0375,
+        "none": 0.023
+      },
+      "coverage": {
+        "anchored": 16,
+        "blind": 8,
+        "contaminated": 3,
+        "none": 123
+      }
+    }
+  }
+}
